@@ -18,7 +18,11 @@
   .wrap{max-width:640px;margin:0 auto;padding:56px 22px 72px}
   .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
   h1{font-size:30px;line-height:1.25;margin:.25em 0 .15em}
-  .sub{color:var(--muted);margin:.2em 0 2em}
+  .sub{color:var(--muted);margin:.2em 0 1.2em}
+  .langs{font-size:13px;color:var(--muted);margin:0 0 1.6em;line-height:2}
+  .langs a{color:var(--muted);text-decoration:none;padding:2px 6px;border-radius:6px}
+  .langs a:hover{color:var(--accent)}
+  .langs a.on{color:var(--accent);font-weight:600;background:var(--card);border:1px solid var(--line)}
   .links{display:grid;gap:14px;margin:0 0 32px}
   a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
          padding:18px 20px;text-decoration:none;color:inherit;transition:border-color .15s}
@@ -36,28 +40,111 @@
 
   <div class="eyebrow">新闻中文</div>
   <h1>뉴스중국어학습 <span style="font-weight:400;color:var(--muted)">/ News Chinese</span></h1>
-  <p class="sub">실제 뉴스로 배우는 중국어 · Learn Mandarin through real news.</p>
+  <p class="sub" id="t-sub">Learn Mandarin through real news.</p>
+
+  <nav class="langs" id="langNav" aria-label="Language">
+    <a href="#" data-lang="en">English</a> ·
+    <a href="#" data-lang="ko">한국어</a> ·
+    <a href="#" data-lang="ja">日本語</a> ·
+    <a href="#" data-lang="de">Deutsch</a> ·
+    <a href="#" data-lang="fr">Français</a> ·
+    <a href="#" data-lang="it">Italiano</a> ·
+    <a href="#" data-lang="es">Español</a> ·
+    <a href="#" data-lang="vi">Tiếng Việt</a>
+  </nav>
 
   <div class="links">
-    <a class="card" href="support.html">
-      <strong>고객지원 · Support &amp; FAQ →</strong>
-      <span>문의처, 자주 묻는 질문, 구독·환불 안내 · Contact, FAQ, subscription &amp; refund help</span>
+    <a class="card" href="support.html" id="cardSupport">
+      <strong id="t-sup-t">Support &amp; FAQ →</strong>
+      <span id="t-sup-d">Contact, FAQ, subscription &amp; refund help</span>
     </a>
-    <a class="card" href="privacy.html">
-      <strong>개인정보처리방침 · Privacy Policy →</strong>
-      <span>수집하지 않는 정보, 네트워크 통신 내역, 보존·삭제 · What we don't collect, network access, retention &amp; deletion</span>
+    <a class="card" href="privacy.html" id="cardPrivacy">
+      <strong id="t-prv-t">Privacy Policy →</strong>
+      <span id="t-prv-d">What we don't collect, network access, retention &amp; deletion</span>
     </a>
   </div>
 
   <div class="meta">
-    <p><strong>앱 / App:</strong> 뉴스중국어학습 · News Chinese (新闻中文)</p>
-    <p><strong>번들 ID / Bundle ID:</strong> com.chnews.one</p>
-    <p><strong>플랫폼 / Platforms:</strong> iOS (App Store) · Android (Google Play)</p>
-    <p><strong>개발자 / Developer:</strong> 임한수 (Hansoo Lim) — Chinese Learning Studio</p>
-    <p><strong>문의 / Contact:</strong> <a class="mail" href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
+    <p><strong id="t-m-app">App:</strong> 뉴스중국어학습 · News Chinese (新闻中文)</p>
+    <p><strong id="t-m-bundle">Bundle ID:</strong> com.chnews.one</p>
+    <p><strong id="t-m-platform">Platforms:</strong> iOS (App Store) · Android (Google Play)</p>
+    <p><strong id="t-m-dev">Developer:</strong> 임한수 (Hansoo Lim) — Chinese Learning Studio</p>
+    <p><strong id="t-m-contact">Contact:</strong> <a class="mail" href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
   </div>
 
   <footer>© 뉴스중국어학습 / News Chinese (新闻中文). All rights reserved.</footer>
 </div>
+
+<script>
+(function () {
+  var STR = {
+    ko: { sub:"실제 뉴스로 배우는 중국어",
+          supT:"고객지원 · FAQ →", supD:"문의처, 자주 묻는 질문, 구독·환불 안내",
+          prvT:"개인정보처리방침 →", prvD:"수집하지 않는 정보, 네트워크 통신 내역, 보존·삭제",
+          mApp:"앱:", mBundle:"번들 ID:", mPlatform:"플랫폼:", mDev:"개발자:", mContact:"문의:" },
+    en: { sub:"Learn Mandarin through real news.",
+          supT:"Support & FAQ →", supD:"Contact, FAQ, subscription & refund help",
+          prvT:"Privacy Policy →", prvD:"What we don't collect, network access, retention & deletion",
+          mApp:"App:", mBundle:"Bundle ID:", mPlatform:"Platforms:", mDev:"Developer:", mContact:"Contact:" },
+    ja: { sub:"本物のニュースで学ぶ中国語。",
+          supT:"サポート・FAQ →", supD:"お問い合わせ、よくある質問、サブスクリプション・返金のご案内",
+          prvT:"プライバシーポリシー →", prvD:"収集しない情報、ネットワーク通信、保存と削除",
+          mApp:"アプリ:", mBundle:"バンドルID:", mPlatform:"プラットフォーム:", mDev:"開発者:", mContact:"お問い合わせ:" },
+    de: { sub:"Chinesisch lernen mit echten Nachrichten.",
+          supT:"Support & FAQ →", supD:"Kontakt, häufige Fragen, Hilfe zu Abo & Erstattung",
+          prvT:"Datenschutzerklärung →", prvD:"Was wir nicht erheben, Netzwerkzugriffe, Speicherung & Löschung",
+          mApp:"App:", mBundle:"Bundle-ID:", mPlatform:"Plattformen:", mDev:"Entwickler:", mContact:"Kontakt:" },
+    fr: { sub:"Apprendre le chinois avec de vraies actualités.",
+          supT:"Assistance & FAQ →", supD:"Contact, questions fréquentes, aide abonnement & remboursement",
+          prvT:"Politique de confidentialité →", prvD:"Ce que nous ne collectons pas, accès réseau, conservation & suppression",
+          mApp:"App :", mBundle:"Bundle ID :", mPlatform:"Plateformes :", mDev:"Développeur :", mContact:"Contact :" },
+    it: { sub:"Impara il cinese con notizie vere.",
+          supT:"Supporto e FAQ →", supD:"Contatti, domande frequenti, aiuto su abbonamento e rimborsi",
+          prvT:"Informativa sulla privacy →", prvD:"Cosa non raccogliamo, accessi di rete, conservazione ed eliminazione",
+          mApp:"App:", mBundle:"Bundle ID:", mPlatform:"Piattaforme:", mDev:"Sviluppatore:", mContact:"Contatti:" },
+    es: { sub:"Aprende chino con noticias reales.",
+          supT:"Soporte y preguntas frecuentes →", supD:"Contacto, preguntas frecuentes, ayuda con suscripción y reembolsos",
+          prvT:"Política de privacidad →", prvD:"Qué no recopilamos, accesos de red, conservación y eliminación",
+          mApp:"App:", mBundle:"Bundle ID:", mPlatform:"Plataformas:", mDev:"Desarrollador:", mContact:"Contacto:" },
+    vi: { sub:"Học tiếng Trung qua tin tức thực tế.",
+          supT:"Hỗ trợ & Câu hỏi thường gặp →", supD:"Liên hệ, câu hỏi thường gặp, hướng dẫn đăng ký & hoàn tiền",
+          prvT:"Chính sách quyền riêng tư →", prvD:"Dữ liệu không thu thập, truy cập mạng, lưu trữ & xóa",
+          mApp:"Ứng dụng:", mBundle:"Bundle ID:", mPlatform:"Nền tảng:", mDev:"Nhà phát triển:", mContact:"Liên hệ:" }
+  };
+  // The privacy page carries per-language sections; deep-link straight to the
+  // matching one so the reader never lands on a language they can't read.
+  var PRIVACY_ANCHOR = { ko:"#ko", en:"#en", ja:"#ja", de:"#de", fr:"#fr", it:"#it", es:"#es", vi:"#vi" };
+
+  function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
+
+  function apply(lang) {
+    var s = STR[lang] || STR.en;
+    set("t-sub", s.sub);
+    set("t-sup-t", s.supT); set("t-sup-d", s.supD);
+    set("t-prv-t", s.prvT); set("t-prv-d", s.prvD);
+    set("t-m-app", s.mApp); set("t-m-bundle", s.mBundle);
+    set("t-m-platform", s.mPlatform); set("t-m-dev", s.mDev); set("t-m-contact", s.mContact);
+    var prv = document.getElementById("cardPrivacy");
+    if (prv) prv.setAttribute("href", "privacy.html" + (PRIVACY_ANCHOR[lang] || ""));
+    document.documentElement.lang = lang;
+    var links = document.querySelectorAll("#langNav a");
+    for (var i = 0; i < links.length; i++)
+      links[i].className = links[i].getAttribute("data-lang") === lang ? "on" : "";
+    try { localStorage.setItem("cls-lang", lang); } catch (e) {}
+  }
+
+  document.getElementById("langNav").addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a[data-lang]") : null;
+    if (!a) return;
+    e.preventDefault();
+    apply(a.getAttribute("data-lang"));
+  });
+
+  // English by default for everyone; only an explicit pick (stored) overrides it.
+  var saved = null;
+  try { saved = localStorage.getItem("cls-lang"); } catch (e) {}
+  apply(saved && STR[saved] ? saved : "en");
+})();
+</script>
 </body>
 </html>

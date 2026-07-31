@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>개인정보처리방침 — 뉴스중국어학습 (新闻中文) / Privacy Policy — News Chinese (新闻中文)</title>
@@ -49,8 +49,116 @@
 <body>
 <article>
     <div class="lang-toggle">
-        <a href="#ko">한국어</a> · <a href="#en">English</a>
+        <a href="#en">English</a> · <a href="#ko">한국어</a> · <a href="#ja">日本語</a> · <a href="#de">Deutsch</a> · <a href="#fr">Français</a> · <a href="#it">Italiano</a> · <a href="#es">Español</a> · <a href="#vi">Tiếng Việt</a>
     </div>
+
+    <h1 id="en">Privacy Policy (English)</h1>
+
+    <div class="meta">
+        <p><strong>App:</strong> News Chinese (新闻中文) — localized names: 뉴스중국어학습 (KO) · ニュース中国語 (JA) · Chinesisch (DE) · Chinois actu (FR) · Cinese news (IT) · Chino actual (ES) · Tiếng Trung (VI)</p>
+        <p><strong>Platforms:</strong> iOS (App Store) · Android (Google Play)</p>
+        <p><strong>Package / Bundle ID:</strong> com.chnews.one</p>
+        <p><strong>Developer:</strong> Hansoo Lim — Chinese Learning Studio</p>
+        <p><strong>Contact:</strong> <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
+        <p><strong>Last updated:</strong> 2026-07-21</p>
+    </div>
+
+    <h2>1. TL;DR</h2>
+    <p>The developer <strong>does not collect, store, or transmit any personal data.</strong> There is no backend server, no ads SDK, no analytics/tracking SDK, and no account/login. On iOS, your bookmarks, learned words, and quiz progress/badges may sync through <strong>your own Apple iCloud</strong> (under your control; the developer cannot access it). The optional Pro upgrade is processed by Apple App Store (iOS) or Google Play Billing (Android).</p>
+    <p>Some features do, however, make the app <strong>talk directly to third-party services</strong> — downloading the app's configuration file, fetching news articles, streaming radio, and translating a sentence when you tap the translate button. These requests carry no account, device identifier, or token, but by the nature of an internet request the receiving service does see your IP address. See <a href="#net-en">4. Network access</a> for the full list.</p>
+
+    <h2>2. Personal data we collect</h2>
+    <p><strong>None.</strong> The developer does not collect names, emails, phone numbers, location, contacts, photos/media, advertising identifiers (IDFA/AAID), device identifiers, or usage telemetry. There is no developer-operated server. On iOS, the app performs no App Tracking Transparency (ATT) tracking.</p>
+
+    <h2>3. Data stored on your device and your own iCloud</h2>
+    <p>The following items are stored on your device by default (iOS: UserDefaults / Keychain / bundled SQLite; Android: SharedPreferences / SQLite):</p>
+    <ul>
+        <li>Bookmarks (which sentences/articles you saved)</li>
+        <li>Learned words (vocabulary) and quiz progress / achievement badges</li>
+        <li>App preferences — dark mode, font size, auto-play, keep-screen-on, haptics</li>
+    </ul>
+    <p><strong>iOS sync:</strong> if you are signed into iCloud and iCloud Drive is enabled for this app, your bookmarks, learned words, and quiz badges may sync to your other Apple devices through <strong>your own private iCloud container</strong>. Apple stores this under your account; <strong>the developer cannot access it.</strong> To disable syncing, turn off iCloud for this app in iOS Settings. The app's "Settings → Reset All Data" deletes the iCloud copy along with the local data.</p>
+
+    <h2 id="net-en">4. Network access</h2>
+    <p>The list below is exhaustive — these are the only cases in which the app contacts an external service. Every request uses HTTPS and carries no account, login token, or advertising identifier. By the nature of an internet request, however, the receiving server does see your IP address and User-Agent.</p>
+    <div class="table-wrap">
+    <table>
+        <thead>
+            <tr><th>Endpoint</th><th>Purpose</th><th>When it happens</th><th>What the recipient sees</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>raw.githubusercontent.com</code></td>
+                <td>Fetches the radio-station list, the curated news list, and app configuration, so these can change without an app update</td>
+                <td><strong>At app launch</strong> and when the related feature is used</td>
+                <td>IP address, User-Agent</td>
+            </tr>
+            <tr>
+                <td>VOA Chinese · Wikinews · Wikipedia</td>
+                <td>News article bodies</td>
+                <td>When you open an article whose text is not already stored on your device</td>
+                <td>IP address, the article identifier requested</td>
+            </tr>
+            <tr>
+                <td><code>translate.googleapis.com</code> · <code>translate.google.com</code> (Google Translate)</td>
+                <td>Translating a sentence you selected</td>
+                <td><strong>Only when you tap the translate button</strong></td>
+                <td>The sentence text, target language, IP address</td>
+            </tr>
+            <tr>
+                <td><code>sk.cri.cn</code> (CRI) · <code>ngcdn001.cnr.cn</code> (中国之声)</td>
+                <td>Live Chinese-language radio streaming</td>
+                <td>Only while radio is playing</td>
+                <td>IP address, listening-session data</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <p><strong>Notice regarding Google Translate:</strong> using the sentence-translation feature <strong>sends that sentence's text to Google</strong>. Google receives the text and your IP address and handles them under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. This happens <strong>only when you explicitly request a translation</strong> — never automatically — and no account details or device identifiers are sent alongside it. If you never use the translation feature, no data is sent to Google.</p>
+    <p>The developer neither collects nor can inspect the contents of any of the above, and operates no server. Downloaded articles are cached on your device for re-reading and then discarded. Word definitions and dictionary data ship inside the app and are looked up on-device, so no network request is made for them. UN News items arrive with their text already included in the curated news list above; the app never contacts a UN server directly.</p>
+
+    <h2>5. Permissions</h2>
+    <p><strong>iOS:</strong> the app requests no sensitive permissions (camera, microphone, location, contacts, photos) and no tracking (ATT) permission. It uses the background-audio mode so user-initiated learning audio (sentence MP3, full-chapter playback, article TTS) can keep playing with the screen off and show lock-screen transport controls.</p>
+    <p><strong>Notification permission:</strong> the daily "Today's Sentence" reminder is on by default, and the app asks for notification permission after you dismiss the daily sentence popup, or when you turn the reminder on in Settings. These are <strong>local notifications generated on your device</strong> — nothing is sent to a server and nothing arrives via a push service. You can turn them off at any time in the app's settings, and declining the permission leaves every other feature working. No marketing notifications are ever sent.</p>
+    <p><strong>Android:</strong> <code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>VIBRATE</code> (normal), <code>FOREGROUND_SERVICE</code> + <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code> (media-playback type), <code>RECEIVE_BOOT_COMPLETED</code> (to restore the scheduled study reminder after a reboot), and the Android 13+ runtime permission <code>POST_NOTIFICATIONS</code> (used to show the daily "Today's Sentence" reminder — the now-playing card shown during audio is a media-session notification that appears regardless of this permission). No other dangerous permissions are requested, and no marketing notifications are sent.</p>
+
+    <h2>6. Text-to-speech</h2>
+    <p>Article reading and sentence audio use the operating system's on-device TTS engine (iOS AVSpeechSynthesizer / Android TTS) and bundled MP3 files. <strong>All synthesis happens on-device</strong>; no audio is sent to cloud TTS services.</p>
+
+    <h2>7. Ads, analytics, payments</h2>
+    <p>This app contains <strong>no</strong> advertising SDK and no analytics/tracking SDK (Firebase Analytics, Google Analytics, Crashlytics, AppsFlyer, Adjust, etc.). The optional Pro upgrade uses <strong>Apple App Store (iOS) or Google Play Billing (Android)</strong>; the app does not directly collect or store payment card numbers or payment account details.</p>
+
+    <h2>8. Children</h2>
+    <p>Since the developer collects zero personal data, the app is safe for all ages. COPPA (US) and GDPR minor provisions (EU) do not apply.</p>
+
+    <h2>9. Third-party content &amp; copyright</h2>
+    <p>The "Realtime News" feature displays third-party content under the following terms:</p>
+    <ul>
+        <li><strong>VOA Chinese</strong> — U.S. Government work (public domain, 17 U.S.C. §105). Each article screen carries source attribution.</li>
+        <li><strong>Wikinews (Chinese)</strong> — <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>. Each article screen carries source + license attribution.</li>
+        <li><strong>UN News</strong> — source attribution and a link to the original page are provided.</li>
+    </ul>
+    <p><strong>Chinese radio</strong> — the app plays the public live streams of CRI 环球资讯广播 and 中国之声 by <strong>connecting directly to the address each broadcaster publishes</strong>. Broadcasts are never recorded, stored, or redistributed, and copyright remains with each broadcaster. Any station will be removed from the list immediately on a rights-holder's request.</p>
+    <p>Chapter sentences and audio in the "Sentence Study / Full Listening / Quiz" features are first-party content authored by the app publisher.</p>
+
+    <h2>10. Data security</h2>
+    <p>There is no developer-side breach surface since no data is transmitted to a developer server. All outbound network calls are HTTPS/TLS only (iOS App Transport Security; Android <code>usesCleartextTraffic="false"</code>). iOS sync data follows Apple iCloud's security policies.</p>
+
+    <h2>11. Retention, deletion &amp; your rights</h2>
+    <p>Because there is no developer-operated server, <strong>no server-side retention period exists.</strong> The developer holds no user data, so there is nothing to access, correct, or port on the developer's side.</p>
+    <ul>
+        <li><strong>On-device data</strong> (bookmarks, learned words, quiz progress/badges, preferences) — retained until you delete it or uninstall the app. "Settings → Reset All Data" erases it immediately, and <strong>deletes the iCloud copy along with it</strong>.</li>
+        <li><strong>Cached news articles</strong> — stored temporarily for re-reading and discarded automatically. Also cleared by "Reset All Data".</li>
+        <li><strong>Pro purchase state</strong> — only a yes/no flag is stored. It is kept even after a data reset in order to preserve a purchase you legitimately made, and is restorable from your Apple/Google account's purchase history. It contains no personally identifying information.</li>
+        <li><strong>Uninstalling</strong> — the operating system removes all local data.</li>
+    </ul>
+    <p>For enquiries or deletion requests under the EU GDPR or other regional laws, write to <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a> and you will receive a reply.</p>
+
+    <h2>12. Changes to this policy</h2>
+    <p>Updates are published at the same URL. The "Last updated" date at the top reflects the most recent revision. Material changes are noted in the app's release notes.</p>
+
+    <h2>13. Contact</h2>
+    <p>Questions about this policy or the app's data handling: <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
 
     <h1 id="ko">개인정보처리방침</h1>
 
@@ -162,113 +270,653 @@
 
     <hr>
 
-    <h1 id="en">Privacy Policy (English)</h1>
+    <h1 id="ja">プライバシーポリシー（日本語）</h1>
 
     <div class="meta">
-        <p><strong>App:</strong> News Chinese (新闻中文) — localized names: 뉴스중국어학습 (KO) · ニュース中国語 (JA) · Chinesisch (DE) · Chinois actu (FR) · Cinese news (IT) · Chino actual (ES) · Tiếng Trung (VI)</p>
-        <p><strong>Platforms:</strong> iOS (App Store) · Android (Google Play)</p>
-        <p><strong>Package / Bundle ID:</strong> com.chnews.one</p>
-        <p><strong>Developer:</strong> Hansoo Lim — Chinese Learning Studio</p>
-        <p><strong>Contact:</strong> <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
-        <p><strong>Last updated:</strong> 2026-07-21</p>
+        <p><strong>アプリ：</strong> News Chinese (新闻中文) — 各言語での名称：뉴스중국어학습 (KO) · ニュース中国語 (JA) · Chinesisch (DE) · Chinois actu (FR) · Cinese news (IT) · Chino actual (ES) · Tiếng Trung (VI)</p>
+        <p><strong>プラットフォーム：</strong> iOS（App Store）· Android（Google Play）</p>
+        <p><strong>パッケージ／バンドルID：</strong> com.chnews.one</p>
+        <p><strong>開発者：</strong> Hansoo Lim — Chinese Learning Studio</p>
+        <p><strong>お問い合わせ：</strong> <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
+        <p><strong>最終更新日：</strong> 2026-07-21</p>
     </div>
 
-    <h2>1. TL;DR</h2>
-    <p>The developer <strong>does not collect, store, or transmit any personal data.</strong> There is no backend server, no ads SDK, no analytics/tracking SDK, and no account/login. On iOS, your bookmarks, learned words, and quiz progress/badges may sync through <strong>your own Apple iCloud</strong> (under your control; the developer cannot access it). The optional Pro upgrade is processed by Apple App Store (iOS) or Google Play Billing (Android).</p>
-    <p>Some features do, however, make the app <strong>talk directly to third-party services</strong> — downloading the app's configuration file, fetching news articles, streaming radio, and translating a sentence when you tap the translate button. These requests carry no account, device identifier, or token, but by the nature of an internet request the receiving service does see your IP address. See <a href="#net-en">4. Network access</a> for the full list.</p>
+    <h2>1. かんたんに言うと</h2>
+    <p>開発者は、個人データを<strong>一切収集・保存・送信しません。</strong>バックエンドサーバーも、広告SDKも、分析・トラッキングSDKも、アカウント／ログインもありません。iOSでは、ブックマーク・学習した単語・クイズの進捗やバッジが<strong>ご自身のApple iCloud</strong>を通じて同期されることがあります（管理はご本人の手元にあり、開発者はアクセスできません）。オプションのProアップグレードの決済は、Apple App Store（iOS）またはGoogle Play Billing（Android）が処理します。</p>
+    <p>ただし、一部の機能では、アプリが<strong>サードパーティのサービスと直接通信します</strong>。アプリの設定ファイルのダウンロード、ニュース記事の取得、ラジオのストリーミング、そして翻訳ボタンをタップしたときの文の翻訳がそれにあたります。これらのリクエストにアカウント・端末識別子・トークンは含まれませんが、インターネット通信の性質上、受信側のサービスにはあなたのIPアドレスが見えます。完全な一覧は<a href="#net-ja">4. ネットワークアクセス</a>をご覧ください。</p>
 
-    <h2>2. Personal data we collect</h2>
-    <p><strong>None.</strong> The developer does not collect names, emails, phone numbers, location, contacts, photos/media, advertising identifiers (IDFA/AAID), device identifiers, or usage telemetry. There is no developer-operated server. On iOS, the app performs no App Tracking Transparency (ATT) tracking.</p>
+    <h2>2. 収集する個人データ</h2>
+    <p><strong>ありません。</strong>開発者は、氏名・メールアドレス・電話番号・位置情報・連絡先・写真／メディア・広告識別子（IDFA／AAID）・端末識別子・利用状況テレメトリーのいずれも収集しません。開発者が運営するサーバーは存在しません。iOSでは、App Tracking Transparency（ATT）によるトラッキングは一切行いません。</p>
 
-    <h2>3. Data stored on your device and your own iCloud</h2>
-    <p>The following items are stored on your device by default (iOS: UserDefaults / Keychain / bundled SQLite; Android: SharedPreferences / SQLite):</p>
+    <h2>3. お使いの端末とご自身のiCloudに保存されるデータ</h2>
+    <p>次の項目は、初期設定ではお使いの端末に保存されます（iOS：UserDefaults／Keychain／同梱SQLite、Android：SharedPreferences／SQLite）：</p>
     <ul>
-        <li>Bookmarks (which sentences/articles you saved)</li>
-        <li>Learned words (vocabulary) and quiz progress / achievement badges</li>
-        <li>App preferences — dark mode, font size, auto-play, keep-screen-on, haptics</li>
+        <li>ブックマーク（保存した文・記事）</li>
+        <li>学習した単語（単語帳）とクイズの進捗・達成バッジ</li>
+        <li>アプリの設定 — ダークモード、文字サイズ、自動再生、画面を消灯しない設定、触覚フィードバック</li>
     </ul>
-    <p><strong>iOS sync:</strong> if you are signed into iCloud and iCloud Drive is enabled for this app, your bookmarks, learned words, and quiz badges may sync to your other Apple devices through <strong>your own private iCloud container</strong>. Apple stores this under your account; <strong>the developer cannot access it.</strong> To disable syncing, turn off iCloud for this app in iOS Settings. The app's "Settings → Reset All Data" deletes the iCloud copy along with the local data.</p>
+    <p><strong>iOSの同期：</strong>iCloudにサインインしていて、このアプリのiCloud Driveが有効になっている場合、ブックマーク・学習した単語・クイズのバッジが<strong>ご自身専用のプライベートなiCloudコンテナ</strong>を通じて、お持ちの他のAppleデバイスに同期されることがあります。このデータはAppleがあなたのアカウントの下で保管し、<strong>開発者はアクセスできません。</strong>同期を無効にするには、iOSの設定でこのアプリのiCloudをオフにしてください。アプリ内の「設定 → すべてのデータをリセット」を実行すると、ローカルデータと一緒にiCloud上のコピーも削除されます。</p>
 
-    <h2 id="net-en">4. Network access</h2>
-    <p>The list below is exhaustive — these are the only cases in which the app contacts an external service. Every request uses HTTPS and carries no account, login token, or advertising identifier. By the nature of an internet request, however, the receiving server does see your IP address and User-Agent.</p>
+    <h2 id="net-ja">4. ネットワークアクセス</h2>
+    <p>以下のリストがすべてです — アプリが外部サービスに接続するのは、これらの場合に限られます。すべてのリクエストはHTTPSを使用し、アカウント・ログイントークン・広告識別子は一切含まれません。ただし、インターネット通信の性質上、受信側のサーバーにはあなたのIPアドレスとUser-Agentが見えます。</p>
     <div class="table-wrap">
     <table>
         <thead>
-            <tr><th>Endpoint</th><th>Purpose</th><th>When it happens</th><th>What the recipient sees</th></tr>
+            <tr><th>接続先</th><th>目的</th><th>発生するタイミング</th><th>受信側に見える情報</th></tr>
         </thead>
         <tbody>
             <tr>
                 <td><code>raw.githubusercontent.com</code></td>
-                <td>Fetches the radio-station list, the curated news list, and app configuration, so these can change without an app update</td>
-                <td><strong>At app launch</strong> and when the related feature is used</td>
-                <td>IP address, User-Agent</td>
+                <td>ラジオ局リスト・厳選ニュースリスト・アプリ設定の取得（アプリを更新しなくても内容を変更できるようにするため）</td>
+                <td><strong>アプリ起動時</strong>と、該当機能の利用時</td>
+                <td>IPアドレス、User-Agent</td>
             </tr>
             <tr>
-                <td>VOA Chinese · Wikinews · Wikipedia</td>
-                <td>News article bodies</td>
-                <td>When you open an article whose text is not already stored on your device</td>
-                <td>IP address, the article identifier requested</td>
+                <td>VOA 中文 · Wikinews · Wikipedia</td>
+                <td>ニュース記事の本文</td>
+                <td>本文がまだ端末に保存されていない記事を開いたとき</td>
+                <td>IPアドレス、リクエストした記事の識別子</td>
             </tr>
             <tr>
-                <td><code>translate.googleapis.com</code> · <code>translate.google.com</code> (Google Translate)</td>
-                <td>Translating a sentence you selected</td>
-                <td><strong>Only when you tap the translate button</strong></td>
-                <td>The sentence text, target language, IP address</td>
+                <td><code>translate.googleapis.com</code> · <code>translate.google.com</code>（Google翻訳）</td>
+                <td>選択した文の翻訳</td>
+                <td><strong>翻訳ボタンをタップしたときのみ</strong></td>
+                <td>文のテキスト、翻訳先の言語、IPアドレス</td>
             </tr>
             <tr>
-                <td><code>sk.cri.cn</code> (CRI) · <code>ngcdn001.cnr.cn</code> (中国之声)</td>
-                <td>Live Chinese-language radio streaming</td>
-                <td>Only while radio is playing</td>
-                <td>IP address, listening-session data</td>
+                <td><code>sk.cri.cn</code>（CRI）· <code>ngcdn001.cnr.cn</code>（中国之声）</td>
+                <td>中国語ライブラジオのストリーミング</td>
+                <td>ラジオの再生中のみ</td>
+                <td>IPアドレス、再生セッション情報</td>
             </tr>
         </tbody>
     </table>
     </div>
-    <p><strong>Notice regarding Google Translate:</strong> using the sentence-translation feature <strong>sends that sentence's text to Google</strong>. Google receives the text and your IP address and handles them under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. This happens <strong>only when you explicitly request a translation</strong> — never automatically — and no account details or device identifiers are sent alongside it. If you never use the translation feature, no data is sent to Google.</p>
-    <p>The developer neither collects nor can inspect the contents of any of the above, and operates no server. Downloaded articles are cached on your device for re-reading and then discarded. Word definitions and dictionary data ship inside the app and are looked up on-device, so no network request is made for them. UN News items arrive with their text already included in the curated news list above; the app never contacts a UN server directly.</p>
+    <p><strong>Google翻訳に関するお知らせ：</strong>文の翻訳機能を使うと、<strong>その文のテキストがGoogleに送信されます</strong>。GoogleはテキストとあなたのIPアドレスを受け取り、<a href="https://policies.google.com/privacy">Googleプライバシーポリシー</a>に基づいて取り扱います。これは<strong>あなたが明示的に翻訳を要求したときにのみ</strong>行われ、自動的に行われることは決してありません。また、アカウント情報や端末識別子が一緒に送信されることもありません。翻訳機能を使わなければ、Googleにデータが送信されることはありません。</p>
+    <p>開発者は上記のいずれの内容も収集せず、閲覧することもできず、サーバーも運営していません。ダウンロードした記事は再読のために端末にキャッシュされ、その後破棄されます。単語の意味や辞書データはアプリに同梱されていて端末内で検索されるため、そのためのネットワークリクエストは発生しません。UN Newsの記事は、上記の厳選ニュースリストにテキストが含まれた形で届くため、アプリが国連のサーバーに直接接続することはありません。</p>
 
-    <h2>5. Permissions</h2>
-    <p><strong>iOS:</strong> the app requests no sensitive permissions (camera, microphone, location, contacts, photos) and no tracking (ATT) permission. It uses the background-audio mode so user-initiated learning audio (sentence MP3, full-chapter playback, article TTS) can keep playing with the screen off and show lock-screen transport controls.</p>
-    <p><strong>Notification permission:</strong> the daily "Today's Sentence" reminder is on by default, and the app asks for notification permission after you dismiss the daily sentence popup, or when you turn the reminder on in Settings. These are <strong>local notifications generated on your device</strong> — nothing is sent to a server and nothing arrives via a push service. You can turn them off at any time in the app's settings, and declining the permission leaves every other feature working. No marketing notifications are ever sent.</p>
-    <p><strong>Android:</strong> <code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>VIBRATE</code> (normal), <code>FOREGROUND_SERVICE</code> + <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code> (media-playback type), <code>RECEIVE_BOOT_COMPLETED</code> (to restore the scheduled study reminder after a reboot), and the Android 13+ runtime permission <code>POST_NOTIFICATIONS</code> (used to show the daily "Today's Sentence" reminder — the now-playing card shown during audio is a media-session notification that appears regardless of this permission). No other dangerous permissions are requested, and no marketing notifications are sent.</p>
+    <h2>5. 権限</h2>
+    <p><strong>iOS：</strong>このアプリは、機微な権限（カメラ、マイク、位置情報、連絡先、写真）もトラッキング（ATT）権限も要求しません。バックグラウンドオーディオモードを使用しており、ユーザーが開始した学習音声（文のMP3、チャプター通し再生、記事のTTS）を画面オフのまま再生し続け、ロック画面に再生コントロールを表示できます。</p>
+    <p><strong>通知の権限：</strong>毎日の「今日の一文」リマインダーは初期設定でオンになっており、「今日の一文」のポップアップを閉じたあと、または設定でリマインダーをオンにしたときに、アプリが通知の許可をお願いします。これらは<strong>端末上で生成されるローカル通知</strong>であり、サーバーに何かが送信されることも、プッシュサービス経由で届くこともありません。アプリの設定でいつでもオフにでき、許可しなくても他のすべての機能はそのまま使えます。マーケティング通知が送られることは一切ありません。</p>
+    <p><strong>Android：</strong><code>INTERNET</code>、<code>ACCESS_NETWORK_STATE</code>、<code>VIBRATE</code>（通常権限）、<code>FOREGROUND_SERVICE</code> + <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>（メディア再生タイプ）、<code>RECEIVE_BOOT_COMPLETED</code>（再起動後に予約済みの学習リマインダーを復元するため）、およびAndroid 13以降のランタイム権限<code>POST_NOTIFICATIONS</code>（毎日の「今日の一文」リマインダーの表示に使用 — 音声再生中に表示される再生中カードはメディアセッション通知のため、この権限に関係なく表示されます）。これ以外の危険な権限は要求せず、マーケティング通知も送信しません。</p>
 
-    <h2>6. Text-to-speech</h2>
-    <p>Article reading and sentence audio use the operating system's on-device TTS engine (iOS AVSpeechSynthesizer / Android TTS) and bundled MP3 files. <strong>All synthesis happens on-device</strong>; no audio is sent to cloud TTS services.</p>
+    <h2>6. 音声読み上げ（TTS）</h2>
+    <p>記事の読み上げと文の音声には、OSの端末内TTSエンジン（iOS AVSpeechSynthesizer／Android TTS）と同梱のMP3ファイルを使用します。<strong>音声合成はすべて端末内で行われ</strong>、クラウドのTTSサービスに音声が送信されることはありません。</p>
 
-    <h2>7. Ads, analytics, payments</h2>
-    <p>This app contains <strong>no</strong> advertising SDK and no analytics/tracking SDK (Firebase Analytics, Google Analytics, Crashlytics, AppsFlyer, Adjust, etc.). The optional Pro upgrade uses <strong>Apple App Store (iOS) or Google Play Billing (Android)</strong>; the app does not directly collect or store payment card numbers or payment account details.</p>
+    <h2>7. 広告・分析・決済</h2>
+    <p>このアプリには、広告SDKも分析・トラッキングSDK（Firebase Analytics、Google Analytics、Crashlytics、AppsFlyer、Adjustなど）も<strong>一切含まれていません</strong>。オプションのProアップグレードは<strong>Apple App Store（iOS）またはGoogle Play Billing（Android）</strong>を利用し、アプリがクレジットカード番号や決済アカウント情報を直接収集・保存することはありません。</p>
 
-    <h2>8. Children</h2>
-    <p>Since the developer collects zero personal data, the app is safe for all ages. COPPA (US) and GDPR minor provisions (EU) do not apply.</p>
+    <h2>8. お子様について</h2>
+    <p>開発者は個人データを一切収集しないため、このアプリはすべての年齢の方に安心してお使いいただけます。COPPA（米国）およびGDPRの未成年者関連規定（EU）は適用されません。</p>
 
-    <h2>9. Third-party content &amp; copyright</h2>
-    <p>The "Realtime News" feature displays third-party content under the following terms:</p>
+    <h2>9. サードパーティコンテンツと著作権</h2>
+    <p>「リアルタイムニュース」機能では、次の条件のもとでサードパーティのコンテンツを表示します：</p>
     <ul>
-        <li><strong>VOA Chinese</strong> — U.S. Government work (public domain, 17 U.S.C. §105). Each article screen carries source attribution.</li>
-        <li><strong>Wikinews (Chinese)</strong> — <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>. Each article screen carries source + license attribution.</li>
-        <li><strong>UN News</strong> — source attribution and a link to the original page are provided.</li>
+        <li><strong>VOA 中文</strong> — 米国政府の著作物（パブリックドメイン、17 U.S.C. §105）。各記事画面に出典を表示しています。</li>
+        <li><strong>Wikinews（中国語版）</strong> — <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>。各記事画面に出典とライセンスを表示しています。</li>
+        <li><strong>UN News</strong> — 出典の表示と、元記事ページへのリンクを提供しています。</li>
     </ul>
-    <p><strong>Chinese radio</strong> — the app plays the public live streams of CRI 环球资讯广播 and 中国之声 by <strong>connecting directly to the address each broadcaster publishes</strong>. Broadcasts are never recorded, stored, or redistributed, and copyright remains with each broadcaster. Any station will be removed from the list immediately on a rights-holder's request.</p>
-    <p>Chapter sentences and audio in the "Sentence Study / Full Listening / Quiz" features are first-party content authored by the app publisher.</p>
+    <p><strong>中国語ラジオ</strong> — このアプリは、CRI 环球资讯广播と中国之声の公開ライブストリームを、<strong>各放送局が公開しているアドレスに直接接続して</strong>再生します。放送を録音・保存・再配信することは一切なく、著作権は各放送局に帰属します。権利者からの要請があれば、該当する放送局を直ちにリストから削除します。</p>
+    <p>「文の学習／通して聞く／クイズ」機能のチャプター文と音声は、アプリ発行者が制作したファーストパーティコンテンツです。</p>
 
-    <h2>10. Data security</h2>
-    <p>There is no developer-side breach surface since no data is transmitted to a developer server. All outbound network calls are HTTPS/TLS only (iOS App Transport Security; Android <code>usesCleartextTraffic="false"</code>). iOS sync data follows Apple iCloud's security policies.</p>
+    <h2>10. データセキュリティ</h2>
+    <p>開発者のサーバーにデータが送信されることはないため、開発者側に漏えいの余地はそもそもありません。外部へのネットワーク通信はすべてHTTPS／TLSのみです（iOSはApp Transport Security、Androidは<code>usesCleartextTraffic="false"</code>）。iOSの同期データはApple iCloudのセキュリティポリシーに従います。</p>
 
-    <h2>11. Retention, deletion &amp; your rights</h2>
-    <p>Because there is no developer-operated server, <strong>no server-side retention period exists.</strong> The developer holds no user data, so there is nothing to access, correct, or port on the developer's side.</p>
+    <h2>11. 保存期間・削除・お客様の権利</h2>
+    <p>開発者が運営するサーバーが存在しないため、<strong>サーバー側の保存期間というものは存在しません。</strong>開発者はユーザーデータを一切保有していないので、開発者側でアクセス・訂正・持ち出し（データポータビリティ）の対象となるものもありません。</p>
     <ul>
-        <li><strong>On-device data</strong> (bookmarks, learned words, quiz progress/badges, preferences) — retained until you delete it or uninstall the app. "Settings → Reset All Data" erases it immediately, and <strong>deletes the iCloud copy along with it</strong>.</li>
-        <li><strong>Cached news articles</strong> — stored temporarily for re-reading and discarded automatically. Also cleared by "Reset All Data".</li>
-        <li><strong>Pro purchase state</strong> — only a yes/no flag is stored. It is kept even after a data reset in order to preserve a purchase you legitimately made, and is restorable from your Apple/Google account's purchase history. It contains no personally identifying information.</li>
-        <li><strong>Uninstalling</strong> — the operating system removes all local data.</li>
+        <li><strong>端末上のデータ</strong>（ブックマーク、学習した単語、クイズの進捗・バッジ、設定）— ご自身で削除するか、アプリをアンインストールするまで保持されます。「設定 → すべてのデータをリセット」で直ちに消去され、<strong>iCloud上のコピーも一緒に削除されます</strong>。</li>
+        <li><strong>キャッシュされたニュース記事</strong> — 再読のために一時的に保存され、自動的に破棄されます。「すべてのデータをリセット」でも消去されます。</li>
+        <li><strong>Pro購入状態</strong> — はい／いいえのフラグのみを保存します。正当に行われた購入を守るため、データリセット後も保持され、Apple／Googleアカウントの購入履歴から復元できます。個人を特定できる情報は含まれていません。</li>
+        <li><strong>アンインストール</strong> — OSがすべてのローカルデータを削除します。</li>
     </ul>
-    <p>For enquiries or deletion requests under the EU GDPR or other regional laws, write to <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a> and you will receive a reply.</p>
+    <p>EU GDPRやその他の地域法に基づくお問い合わせ・削除のご依頼は、<a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a>までご連絡ください。必ずお返事いたします。</p>
 
-    <h2>12. Changes to this policy</h2>
-    <p>Updates are published at the same URL. The "Last updated" date at the top reflects the most recent revision. Material changes are noted in the app's release notes.</p>
+    <h2>12. 本ポリシーの変更</h2>
+    <p>更新は同じURLで公開されます。冒頭の「最終更新日」が最新の改訂日を示します。重要な変更は、アプリのリリースノートでお知らせします。</p>
+
+    <h2>13. お問い合わせ</h2>
+    <p>本ポリシーやアプリのデータの取り扱いに関するご質問は：<a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
+
+    <h1 id="de">Datenschutzerklärung (Deutsch)</h1>
+
+    <div class="meta">
+        <p><strong>App:</strong> News Chinese (新闻中文) — lokalisierte Namen: 뉴스중국어학습 (KO) · ニュース中国語 (JA) · Chinesisch (DE) · Chinois actu (FR) · Cinese news (IT) · Chino actual (ES) · Tiếng Trung (VI)</p>
+        <p><strong>Plattformen:</strong> iOS (App Store) · Android (Google Play)</p>
+        <p><strong>Package / Bundle-ID:</strong> com.chnews.one</p>
+        <p><strong>Entwickler:</strong> Hansoo Lim — Chinese Learning Studio</p>
+        <p><strong>Kontakt:</strong> <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
+        <p><strong>Zuletzt aktualisiert:</strong> 2026-07-21</p>
+    </div>
+
+    <h2>1. Das Wichtigste in Kürze</h2>
+    <p>Der Entwickler <strong>erhebt, speichert und überträgt keinerlei personenbezogene Daten.</strong> Es gibt keinen Backend-Server, kein Werbe-SDK, kein Analyse- oder Tracking-SDK und kein Konto bzw. keinen Login. Auf iOS können deine Lesezeichen, gelernten Wörter und Quiz-Fortschritte/Abzeichen über <strong>deine eigene Apple iCloud</strong> synchronisiert werden (unter deiner Kontrolle; der Entwickler hat darauf keinen Zugriff). Das optionale Pro-Upgrade wird über den Apple App Store (iOS) bzw. Google Play Billing (Android) abgewickelt.</p>
+    <p>Einige Funktionen lassen die App jedoch <strong>direkt mit Drittanbieter-Diensten kommunizieren</strong> — beim Herunterladen der Konfigurationsdatei der App, beim Abrufen von Nachrichtenartikeln, beim Radio-Streaming und beim Übersetzen eines Satzes, wenn du auf die Übersetzen-Schaltfläche tippst. Diese Anfragen enthalten kein Konto, keine Gerätekennung und kein Token; naturgemäß sieht der empfangende Dienst bei einer Internetanfrage jedoch deine IP-Adresse. Die vollständige Liste findest du unter <a href="#net-de">4. Netzwerkzugriffe</a>.</p>
+
+    <h2>2. Personenbezogene Daten, die wir erheben</h2>
+    <p><strong>Keine.</strong> Der Entwickler erhebt keine Namen, E-Mail-Adressen, Telefonnummern, Standortdaten, Kontakte, Fotos/Medien, Werbekennungen (IDFA/AAID), Gerätekennungen oder Nutzungstelemetrie. Es gibt keinen vom Entwickler betriebenen Server. Auf iOS führt die App kein Tracking im Sinne der App Tracking Transparency (ATT) durch.</p>
+
+    <h2>3. Daten auf deinem Gerät und in deiner eigenen iCloud</h2>
+    <p>Die folgenden Daten werden standardmäßig auf deinem Gerät gespeichert (iOS: UserDefaults / Keychain / mitgelieferte SQLite-Datenbank; Android: SharedPreferences / SQLite):</p>
+    <ul>
+        <li>Lesezeichen (welche Sätze/Artikel du gespeichert hast)</li>
+        <li>Gelernte Wörter (Vokabeln) sowie Quiz-Fortschritte / Erfolgsabzeichen</li>
+        <li>App-Einstellungen — Dunkelmodus, Schriftgröße, automatische Wiedergabe, Bildschirm-an-lassen, Haptik</li>
+    </ul>
+    <p><strong>iOS-Synchronisierung:</strong> wenn du bei iCloud angemeldet bist und iCloud Drive für diese App aktiviert ist, können deine Lesezeichen, gelernten Wörter und Quiz-Abzeichen über <strong>deinen eigenen privaten iCloud-Container</strong> mit deinen anderen Apple-Geräten synchronisiert werden. Apple speichert diese Daten unter deinem Konto; <strong>der Entwickler hat darauf keinen Zugriff.</strong> Um die Synchronisierung zu deaktivieren, schalte iCloud für diese App in den iOS-Einstellungen aus. „Einstellungen → Alle Daten zurücksetzen" in der App löscht die iCloud-Kopie zusammen mit den lokalen Daten.</p>
+
+    <h2 id="net-de">4. Netzwerkzugriffe</h2>
+    <p>Die folgende Liste ist abschließend — dies sind die einzigen Fälle, in denen die App einen externen Dienst kontaktiert. Jede Anfrage läuft über HTTPS und enthält kein Konto, kein Login-Token und keine Werbekennung. Naturgemäß sieht der empfangende Server bei einer Internetanfrage jedoch deine IP-Adresse und deinen User-Agent.</p>
+    <div class="table-wrap">
+    <table>
+        <thead>
+            <tr><th>Endpunkt</th><th>Zweck</th><th>Wann es passiert</th><th>Was der Empfänger sieht</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>raw.githubusercontent.com</code></td>
+                <td>Ruft die Radiosender-Liste, die kuratierte Nachrichtenliste und die App-Konfiguration ab, damit sich diese ohne App-Update ändern können</td>
+                <td><strong>Beim App-Start</strong> und wenn die jeweilige Funktion genutzt wird</td>
+                <td>IP-Adresse, User-Agent</td>
+            </tr>
+            <tr>
+                <td>VOA 中文 · Wikinews · Wikipedia</td>
+                <td>Volltexte von Nachrichtenartikeln</td>
+                <td>Wenn du einen Artikel öffnest, dessen Text noch nicht auf deinem Gerät gespeichert ist</td>
+                <td>IP-Adresse, die Kennung des angeforderten Artikels</td>
+            </tr>
+            <tr>
+                <td><code>translate.googleapis.com</code> · <code>translate.google.com</code> (Google Übersetzer)</td>
+                <td>Übersetzung eines von dir ausgewählten Satzes</td>
+                <td><strong>Nur wenn du auf die Übersetzen-Schaltfläche tippst</strong></td>
+                <td>Der Satztext, die Zielsprache, IP-Adresse</td>
+            </tr>
+            <tr>
+                <td><code>sk.cri.cn</code> (CRI) · <code>ngcdn001.cnr.cn</code> (中国之声)</td>
+                <td>Chinesischsprachiges Live-Radio-Streaming</td>
+                <td>Nur während das Radio läuft</td>
+                <td>IP-Adresse, Daten zur Hörsitzung</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <p><strong>Hinweis zu Google Übersetzer:</strong> wenn du die Satzübersetzung nutzt, <strong>wird der Text dieses Satzes an Google gesendet</strong>. Google erhält den Text und deine IP-Adresse und verarbeitet sie gemäß der <a href="https://policies.google.com/privacy">Google-Datenschutzerklärung</a>. Das geschieht <strong>nur, wenn du ausdrücklich eine Übersetzung anforderst</strong> — niemals automatisch — und es werden dabei keine Kontodaten oder Gerätekennungen mitgesendet. Wenn du die Übersetzungsfunktion nie nutzt, werden keine Daten an Google gesendet.</p>
+    <p>Der Entwickler erhebt die Inhalte der oben genannten Anfragen weder, noch kann er sie einsehen, und er betreibt keinen Server. Heruntergeladene Artikel werden zum erneuten Lesen auf deinem Gerät zwischengespeichert und danach verworfen. Wortbedeutungen und Wörterbuchdaten sind in der App enthalten und werden direkt auf dem Gerät nachgeschlagen, sodass dafür keine Netzwerkanfrage nötig ist. UN News-Beiträge kommen mit ihrem Text bereits in der oben genannten kuratierten Nachrichtenliste an; die App kontaktiert niemals direkt einen UN-Server.</p>
+
+    <h2>5. Berechtigungen</h2>
+    <p><strong>iOS:</strong> die App fordert keine sensiblen Berechtigungen an (Kamera, Mikrofon, Standort, Kontakte, Fotos) und keine Tracking-Berechtigung (ATT). Sie nutzt den Hintergrund-Audio-Modus, damit von dir gestartetes Lern-Audio (Satz-MP3s, Kapitel-Wiedergabe, Artikel-TTS) bei ausgeschaltetem Bildschirm weiterläuft und die Wiedergabesteuerung auf dem Sperrbildschirm angezeigt wird.</p>
+    <p><strong>Mitteilungsberechtigung:</strong> die tägliche Erinnerung „Satz des Tages" ist standardmäßig aktiviert, und die App fragt nach der Mitteilungsberechtigung, nachdem du das Popup mit dem täglichen Satz geschlossen hast oder wenn du die Erinnerung in den Einstellungen einschaltest. Es handelt sich um <strong>lokale Mitteilungen, die auf deinem Gerät erzeugt werden</strong> — nichts wird an einen Server gesendet und nichts kommt über einen Push-Dienst an. Du kannst sie jederzeit in den App-Einstellungen ausschalten, und wenn du die Berechtigung ablehnst, funktionieren alle anderen Funktionen weiterhin. Marketing-Mitteilungen werden niemals versendet.</p>
+    <p><strong>Android:</strong> <code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>VIBRATE</code> (normal), <code>FOREGROUND_SERVICE</code> + <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code> (Typ Medienwiedergabe), <code>RECEIVE_BOOT_COMPLETED</code> (um die geplante Lern-Erinnerung nach einem Neustart wiederherzustellen) sowie die Android-13+-Laufzeitberechtigung <code>POST_NOTIFICATIONS</code> (für die tägliche Erinnerung „Satz des Tages" — die während der Audiowiedergabe angezeigte Now-Playing-Karte ist eine Media-Session-Mitteilung, die unabhängig von dieser Berechtigung erscheint). Weitere gefährliche Berechtigungen werden nicht angefordert, und es werden keine Marketing-Mitteilungen versendet.</p>
+
+    <h2>6. Sprachausgabe (Text-to-Speech)</h2>
+    <p>Das Vorlesen von Artikeln und Satz-Audio nutzen die geräteinterne TTS-Engine des Betriebssystems (iOS AVSpeechSynthesizer / Android TTS) sowie mitgelieferte MP3-Dateien. <strong>Die gesamte Sprachsynthese findet auf dem Gerät statt</strong>; es wird kein Audio an Cloud-TTS-Dienste gesendet.</p>
+
+    <h2>7. Werbung, Analyse, Zahlungen</h2>
+    <p>Diese App enthält <strong>kein</strong> Werbe-SDK und kein Analyse-/Tracking-SDK (Firebase Analytics, Google Analytics, Crashlytics, AppsFlyer, Adjust usw.). Das optionale Pro-Upgrade nutzt den <strong>Apple App Store (iOS) bzw. Google Play Billing (Android)</strong>; die App erhebt und speichert selbst keine Kartennummern oder Zahlungskontodaten.</p>
+
+    <h2>8. Kinder</h2>
+    <p>Da der Entwickler keinerlei personenbezogene Daten erhebt, ist die App für alle Altersgruppen sicher. COPPA (USA) und die Minderjährigen-Bestimmungen der DSGVO (EU) finden keine Anwendung.</p>
+
+    <h2>9. Inhalte Dritter &amp; Urheberrecht</h2>
+    <p>Die Funktion „Aktuelle Nachrichten" zeigt Inhalte Dritter zu folgenden Bedingungen an:</p>
+    <ul>
+        <li><strong>VOA 中文</strong> — Werk der US-Regierung (gemeinfrei, 17 U.S.C. §105). Jede Artikelansicht enthält eine Quellenangabe.</li>
+        <li><strong>Wikinews (Chinesisch)</strong> — <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>. Jede Artikelansicht enthält Quellen- und Lizenzangabe.</li>
+        <li><strong>UN News</strong> — Quellenangabe und ein Link zur Originalseite werden bereitgestellt.</li>
+    </ul>
+    <p><strong>Chinesisches Radio</strong> — die App spielt die öffentlichen Live-Streams von CRI 环球资讯广播 und 中国之声 ab, indem sie sich <strong>direkt mit der von jedem Sender veröffentlichten Adresse verbindet</strong>. Sendungen werden niemals aufgezeichnet, gespeichert oder weiterverbreitet; das Urheberrecht verbleibt beim jeweiligen Sender. Auf Verlangen eines Rechteinhabers wird der betreffende Sender umgehend aus der Liste entfernt.</p>
+    <p>Die Kapitelsätze und Audiodateien in den Funktionen „Satzlernen / Ganz anhören / Quiz" sind Eigeninhalte des App-Herausgebers.</p>
+
+    <h2>10. Datensicherheit</h2>
+    <p>Da keine Daten an einen Entwickler-Server übertragen werden, existiert auf Entwicklerseite keine Angriffsfläche für Datenpannen. Alle ausgehenden Netzwerkverbindungen laufen ausschließlich über HTTPS/TLS (iOS App Transport Security; Android <code>usesCleartextTraffic="false"</code>). iOS-Synchronisierungsdaten unterliegen den Sicherheitsrichtlinien von Apple iCloud.</p>
+
+    <h2>11. Speicherdauer, Löschung &amp; deine Rechte</h2>
+    <p>Da es keinen vom Entwickler betriebenen Server gibt, <strong>existiert keine serverseitige Speicherdauer.</strong> Der Entwickler besitzt keine Nutzerdaten — es gibt also auf Entwicklerseite nichts, worauf zugegriffen, was berichtigt oder übertragen werden könnte.</p>
+    <ul>
+        <li><strong>Daten auf dem Gerät</strong> (Lesezeichen, gelernte Wörter, Quiz-Fortschritte/Abzeichen, Einstellungen) — bleiben gespeichert, bis du sie löschst oder die App deinstallierst. „Einstellungen → Alle Daten zurücksetzen" löscht sie sofort und <strong>entfernt dabei auch die iCloud-Kopie</strong>.</li>
+        <li><strong>Zwischengespeicherte Nachrichtenartikel</strong> — werden vorübergehend zum erneuten Lesen gespeichert und automatisch verworfen. Werden ebenfalls durch „Alle Daten zurücksetzen" gelöscht.</li>
+        <li><strong>Pro-Kaufstatus</strong> — es wird nur ein Ja/Nein-Kennzeichen gespeichert. Es bleibt auch nach einem Daten-Reset erhalten, um einen rechtmäßig getätigten Kauf zu bewahren, und lässt sich über die Kaufhistorie deines Apple-/Google-Kontos wiederherstellen. Es enthält keine personenbezogenen Informationen.</li>
+        <li><strong>Deinstallation</strong> — das Betriebssystem entfernt alle lokalen Daten.</li>
+    </ul>
+    <p>Für Anfragen oder Löschersuchen nach der EU-DSGVO oder anderen regionalen Gesetzen schreibe an <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a> — du erhältst eine Antwort.</p>
+
+    <h2>12. Änderungen dieser Erklärung</h2>
+    <p>Aktualisierungen werden unter derselben URL veröffentlicht. Das Datum „Zuletzt aktualisiert" oben zeigt die letzte Überarbeitung an. Wesentliche Änderungen werden in den Versionshinweisen der App vermerkt.</p>
+
+    <h2>13. Kontakt</h2>
+    <p>Fragen zu dieser Erklärung oder zum Datenumgang der App: <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
+
+    <h1 id="fr">Politique de confidentialité (Français)</h1>
+
+    <div class="meta">
+        <p><strong>Application :</strong> News Chinese (新闻中文) — noms localisés : 뉴스중국어학습 (KO) · ニュース中国語 (JA) · Chinesisch (DE) · Chinois actu (FR) · Cinese news (IT) · Chino actual (ES) · Tiếng Trung (VI)</p>
+        <p><strong>Plateformes :</strong> iOS (App Store) · Android (Google Play)</p>
+        <p><strong>Identifiant de paquet / Bundle ID :</strong> com.chnews.one</p>
+        <p><strong>Développeur :</strong> Hansoo Lim — Chinese Learning Studio</p>
+        <p><strong>Contact :</strong> <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
+        <p><strong>Dernière mise à jour :</strong> 2026-07-21</p>
+    </div>
+
+    <h2>1. L'essentiel en bref</h2>
+    <p>Le développeur <strong>ne collecte, ne stocke et ne transmet aucune donnée personnelle.</strong> Il n'y a ni serveur backend, ni SDK publicitaire, ni SDK d'analyse ou de suivi, ni compte/connexion. Sur iOS, vos favoris, vos mots appris ainsi que votre progression et vos badges de quiz peuvent se synchroniser via <strong>votre propre compte Apple iCloud</strong> (sous votre contrôle ; le développeur ne peut pas y accéder). La mise à niveau Pro, facultative, est traitée par l'App Store d'Apple (iOS) ou par Google Play Billing (Android).</p>
+    <p>Certaines fonctionnalités amènent toutefois l'application à <strong>communiquer directement avec des services tiers</strong> — téléchargement du fichier de configuration de l'application, récupération d'articles de presse, diffusion de la radio en continu, et traduction d'une phrase lorsque vous appuyez sur le bouton de traduction. Ces requêtes ne contiennent aucun compte, identifiant d'appareil ou jeton, mais par la nature même d'une requête Internet, le service destinataire voit votre adresse IP. Consultez la section <a href="#net-fr">4. Accès au réseau</a> pour la liste complète.</p>
+
+    <h2>2. Données personnelles que nous collectons</h2>
+    <p><strong>Aucune.</strong> Le développeur ne collecte ni noms, ni e-mails, ni numéros de téléphone, ni localisation, ni contacts, ni photos/médias, ni identifiants publicitaires (IDFA/AAID), ni identifiants d'appareil, ni télémétrie d'utilisation. Il n'existe aucun serveur exploité par le développeur. Sur iOS, l'application n'effectue aucun suivi App Tracking Transparency (ATT).</p>
+
+    <h2>3. Données stockées sur votre appareil et dans votre propre iCloud</h2>
+    <p>Les éléments suivants sont stockés sur votre appareil par défaut (iOS : UserDefaults / Keychain / SQLite embarqué ; Android : SharedPreferences / SQLite) :</p>
+    <ul>
+        <li>Favoris (les phrases/articles que vous avez enregistrés)</li>
+        <li>Mots appris (vocabulaire) et progression des quiz / badges de réussite</li>
+        <li>Préférences de l'application — mode sombre, taille de police, lecture automatique, écran toujours allumé, retours haptiques</li>
+    </ul>
+    <p><strong>Synchronisation iOS :</strong> si vous êtes connecté à iCloud et qu'iCloud Drive est activé pour cette application, vos favoris, vos mots appris et vos badges de quiz peuvent se synchroniser avec vos autres appareils Apple via <strong>votre propre conteneur iCloud privé</strong>. Apple stocke ces données sous votre compte ; <strong>le développeur ne peut pas y accéder.</strong> Pour désactiver la synchronisation, désactivez iCloud pour cette application dans les Réglages iOS. L'option « Réglages → Réinitialiser toutes les données » de l'application supprime la copie iCloud en même temps que les données locales.</p>
+
+    <h2 id="net-fr">4. Accès au réseau</h2>
+    <p>La liste ci-dessous est exhaustive — ce sont les seuls cas où l'application contacte un service externe. Chaque requête utilise HTTPS et ne contient ni compte, ni jeton de connexion, ni identifiant publicitaire. Par la nature même d'une requête Internet, le serveur destinataire voit toutefois votre adresse IP et votre User-Agent.</p>
+    <div class="table-wrap">
+    <table>
+        <thead>
+            <tr><th>Point de terminaison</th><th>Finalité</th><th>Quand cela se produit</th><th>Ce que le destinataire voit</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>raw.githubusercontent.com</code></td>
+                <td>Récupère la liste des stations de radio, la liste des actualités sélectionnées et la configuration de l'application, afin que celles-ci puissent évoluer sans mise à jour de l'application</td>
+                <td><strong>Au lancement de l'application</strong> et lors de l'utilisation de la fonctionnalité concernée</td>
+                <td>Adresse IP, User-Agent</td>
+            </tr>
+            <tr>
+                <td>VOA 中文 · Wikinews · Wikipédia</td>
+                <td>Corps des articles de presse</td>
+                <td>Lorsque vous ouvrez un article dont le texte n'est pas déjà stocké sur votre appareil</td>
+                <td>Adresse IP, identifiant de l'article demandé</td>
+            </tr>
+            <tr>
+                <td><code>translate.googleapis.com</code> · <code>translate.google.com</code> (Google Traduction)</td>
+                <td>Traduction d'une phrase que vous avez sélectionnée</td>
+                <td><strong>Uniquement lorsque vous appuyez sur le bouton de traduction</strong></td>
+                <td>Le texte de la phrase, la langue cible, l'adresse IP</td>
+            </tr>
+            <tr>
+                <td><code>sk.cri.cn</code> (CRI) · <code>ngcdn001.cnr.cn</code> (中国之声)</td>
+                <td>Diffusion en direct de radio en langue chinoise</td>
+                <td>Uniquement pendant la lecture de la radio</td>
+                <td>Adresse IP, données de session d'écoute</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <p><strong>Remarque concernant Google Traduction :</strong> l'utilisation de la fonction de traduction de phrase <strong>envoie le texte de cette phrase à Google</strong>. Google reçoit le texte et votre adresse IP et les traite conformément à la <a href="https://policies.google.com/privacy">politique de confidentialité de Google</a>. Cela se produit <strong>uniquement lorsque vous demandez explicitement une traduction</strong> — jamais automatiquement — et aucune donnée de compte ni aucun identifiant d'appareil ne sont envoyés en même temps. Si vous n'utilisez jamais la fonction de traduction, aucune donnée n'est envoyée à Google.</p>
+    <p>Le développeur ne collecte ni ne peut inspecter le contenu de ce qui précède, et n'exploite aucun serveur. Les articles téléchargés sont mis en cache sur votre appareil pour la relecture, puis supprimés. Les définitions de mots et les données de dictionnaire sont incluses dans l'application et consultées sur l'appareil, aucune requête réseau n'est donc effectuée pour elles. Les articles UN News arrivent avec leur texte déjà inclus dans la liste d'actualités sélectionnées mentionnée ci-dessus ; l'application ne contacte jamais directement un serveur de l'ONU.</p>
+
+    <h2>5. Autorisations</h2>
+    <p><strong>iOS :</strong> l'application ne demande aucune autorisation sensible (appareil photo, microphone, localisation, contacts, photos) ni aucune autorisation de suivi (ATT). Elle utilise le mode audio en arrière-plan afin que l'audio d'apprentissage lancé par l'utilisateur (MP3 de phrases, lecture de chapitre complet, TTS d'articles) puisse continuer avec l'écran éteint et afficher les commandes de lecture sur l'écran de verrouillage.</p>
+    <p><strong>Autorisation de notification :</strong> le rappel quotidien « Phrase du jour » est activé par défaut, et l'application demande l'autorisation de notification après la fermeture de la fenêtre de la phrase du jour, ou lorsque vous activez le rappel dans les Réglages. Il s'agit de <strong>notifications locales générées sur votre appareil</strong> — rien n'est envoyé à un serveur et rien n'arrive via un service push. Vous pouvez les désactiver à tout moment dans les réglages de l'application, et toutes les autres fonctionnalités restent opérationnelles même si vous refusez l'autorisation. Aucune notification marketing n'est jamais envoyée.</p>
+    <p><strong>Android :</strong> <code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>VIBRATE</code> (normale), <code>FOREGROUND_SERVICE</code> + <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code> (type lecture multimédia), <code>RECEIVE_BOOT_COMPLETED</code> (pour restaurer le rappel d'étude programmé après un redémarrage), et l'autorisation d'exécution Android 13+ <code>POST_NOTIFICATIONS</code> (utilisée pour afficher le rappel quotidien « Phrase du jour » — la carte de lecture en cours affichée pendant l'audio est une notification de session multimédia qui apparaît indépendamment de cette autorisation). Aucune autre autorisation dangereuse n'est demandée, et aucune notification marketing n'est envoyée.</p>
+
+    <h2>6. Synthèse vocale</h2>
+    <p>La lecture des articles et l'audio des phrases utilisent le moteur TTS embarqué du système d'exploitation (iOS AVSpeechSynthesizer / Android TTS) et des fichiers MP3 inclus. <strong>Toute la synthèse s'effectue sur l'appareil</strong> ; aucun audio n'est envoyé à des services TTS dans le cloud.</p>
+
+    <h2>7. Publicité, analyse, paiements</h2>
+    <p>Cette application ne contient <strong>aucun</strong> SDK publicitaire ni aucun SDK d'analyse ou de suivi (Firebase Analytics, Google Analytics, Crashlytics, AppsFlyer, Adjust, etc.). La mise à niveau Pro, facultative, utilise <strong>l'App Store d'Apple (iOS) ou Google Play Billing (Android)</strong> ; l'application ne collecte ni ne stocke directement de numéros de carte bancaire ou de détails de compte de paiement.</p>
+
+    <h2>8. Enfants</h2>
+    <p>Comme le développeur ne collecte aucune donnée personnelle, l'application convient à tous les âges. La loi COPPA (États-Unis) et les dispositions du RGPD relatives aux mineurs (UE) ne s'appliquent pas.</p>
+
+    <h2>9. Contenus tiers et droits d'auteur</h2>
+    <p>La fonctionnalité « Actualités en direct » affiche des contenus tiers selon les conditions suivantes :</p>
+    <ul>
+        <li><strong>VOA 中文</strong> — œuvre du gouvernement des États-Unis (domaine public, 17 U.S.C. §105). Chaque écran d'article comporte la mention de la source.</li>
+        <li><strong>Wikinews (chinois)</strong> — <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>. Chaque écran d'article comporte la mention de la source et de la licence.</li>
+        <li><strong>UN News</strong> — la mention de la source et un lien vers la page d'origine sont fournis.</li>
+    </ul>
+    <p><strong>Radio chinoise</strong> — l'application lit les flux publics en direct de CRI 环球资讯广播 et de 中国之声 en <strong>se connectant directement à l'adresse publiée par chaque diffuseur</strong>. Les émissions ne sont jamais enregistrées, stockées ni redistribuées, et les droits d'auteur restent la propriété de chaque diffuseur. Toute station sera retirée de la liste immédiatement à la demande d'un ayant droit.</p>
+    <p>Les phrases et l'audio des chapitres dans les fonctionnalités « Étude de phrases / Écoute complète / Quiz » sont des contenus originaux créés par l'éditeur de l'application.</p>
+
+    <h2>10. Sécurité des données</h2>
+    <p>Il n'existe aucune surface de fuite côté développeur puisqu'aucune donnée n'est transmise à un serveur du développeur. Tous les appels réseau sortants se font exclusivement en HTTPS/TLS (iOS App Transport Security ; Android <code>usesCleartextTraffic="false"</code>). Les données de synchronisation iOS suivent les politiques de sécurité d'Apple iCloud.</p>
+
+    <h2>11. Conservation, suppression et vos droits</h2>
+    <p>Comme il n'existe aucun serveur exploité par le développeur, <strong>aucune durée de conservation côté serveur n'existe.</strong> Le développeur ne détient aucune donnée d'utilisateur : il n'y a donc rien à consulter, corriger ou transférer de son côté.</p>
+    <ul>
+        <li><strong>Données sur l'appareil</strong> (favoris, mots appris, progression/badges de quiz, préférences) — conservées jusqu'à ce que vous les supprimiez ou désinstalliez l'application. « Réglages → Réinitialiser toutes les données » les efface immédiatement et <strong>supprime en même temps la copie iCloud</strong>.</li>
+        <li><strong>Articles de presse en cache</strong> — stockés temporairement pour la relecture et supprimés automatiquement. Également effacés par « Réinitialiser toutes les données ».</li>
+        <li><strong>État de l'achat Pro</strong> — seul un indicateur oui/non est stocké. Il est conservé même après une réinitialisation des données afin de préserver un achat que vous avez légitimement effectué, et peut être restauré depuis l'historique d'achats de votre compte Apple/Google. Il ne contient aucune information permettant de vous identifier.</li>
+        <li><strong>Désinstallation</strong> — le système d'exploitation supprime toutes les données locales.</li>
+    </ul>
+    <p>Pour toute demande d'information ou de suppression au titre du RGPD de l'UE ou d'autres lois régionales, écrivez à <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a> et vous recevrez une réponse.</p>
+
+    <h2>12. Modifications de cette politique</h2>
+    <p>Les mises à jour sont publiées à la même URL. La date de « Dernière mise à jour » en haut de page reflète la révision la plus récente. Les changements importants sont signalés dans les notes de version de l'application.</p>
 
     <h2>13. Contact</h2>
-    <p>Questions about this policy or the app's data handling: <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
+    <p>Pour toute question concernant cette politique ou le traitement des données par l'application : <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
+
+    <h1 id="it">Informativa sulla privacy (Italiano)</h1>
+
+    <div class="meta">
+        <p><strong>App:</strong> News Chinese (新闻中文) — nomi localizzati: 뉴스중국어학습 (KO) · ニュース中国語 (JA) · Chinesisch (DE) · Chinois actu (FR) · Cinese news (IT) · Chino actual (ES) · Tiếng Trung (VI)</p>
+        <p><strong>Piattaforme:</strong> iOS (App Store) · Android (Google Play)</p>
+        <p><strong>Package / Bundle ID:</strong> com.chnews.one</p>
+        <p><strong>Sviluppatore:</strong> Hansoo Lim — Chinese Learning Studio</p>
+        <p><strong>Contatto:</strong> <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
+        <p><strong>Ultimo aggiornamento:</strong> 2026-07-21</p>
+    </div>
+
+    <h2>1. In breve</h2>
+    <p>Lo sviluppatore <strong>non raccoglie, non memorizza e non trasmette alcun dato personale.</strong> Non esiste alcun server di backend, nessun SDK pubblicitario, nessun SDK di analisi o tracciamento e nessun account o login. Su iOS, i tuoi segnalibri, le parole apprese e i progressi/badge dei quiz possono sincronizzarsi tramite <strong>il tuo Apple iCloud personale</strong> (sotto il tuo controllo; lo sviluppatore non può accedervi). L'upgrade Pro opzionale viene elaborato da Apple App Store (iOS) o Google Play Billing (Android).</p>
+    <p>Alcune funzioni, tuttavia, fanno sì che l'app <strong>comunichi direttamente con servizi di terze parti</strong> — per scaricare il file di configurazione dell'app, recuperare articoli di notizie, riprodurre la radio in streaming e tradurre una frase quando tocchi il pulsante di traduzione. Queste richieste non contengono account, identificatori del dispositivo o token, ma per la natura stessa di una richiesta internet il servizio ricevente vede il tuo indirizzo IP. Consulta <a href="#net-it">4. Accesso alla rete</a> per l'elenco completo.</p>
+
+    <h2>2. Dati personali che raccogliamo</h2>
+    <p><strong>Nessuno.</strong> Lo sviluppatore non raccoglie nomi, email, numeri di telefono, posizione, contatti, foto/media, identificatori pubblicitari (IDFA/AAID), identificatori del dispositivo né telemetria d'uso. Non esiste alcun server gestito dallo sviluppatore. Su iOS, l'app non effettua alcun tracciamento App Tracking Transparency (ATT).</p>
+
+    <h2>3. Dati memorizzati sul tuo dispositivo e sul tuo iCloud personale</h2>
+    <p>I seguenti elementi vengono memorizzati sul tuo dispositivo per impostazione predefinita (iOS: UserDefaults / Keychain / SQLite incluso nell'app; Android: SharedPreferences / SQLite):</p>
+    <ul>
+        <li>Segnalibri (quali frasi/articoli hai salvato)</li>
+        <li>Parole apprese (vocabolario) e progressi dei quiz / badge conseguiti</li>
+        <li>Preferenze dell'app — modalità scura, dimensione del carattere, riproduzione automatica, schermo sempre attivo, feedback aptico</li>
+    </ul>
+    <p><strong>Sincronizzazione iOS:</strong> se hai effettuato l'accesso a iCloud e iCloud Drive è abilitato per questa app, i tuoi segnalibri, le parole apprese e i badge dei quiz possono sincronizzarsi con gli altri tuoi dispositivi Apple tramite <strong>il tuo container iCloud privato</strong>. Apple li conserva sotto il tuo account; <strong>lo sviluppatore non può accedervi.</strong> Per disattivare la sincronizzazione, disabilita iCloud per questa app nelle Impostazioni di iOS. La funzione "Impostazioni → Ripristina tutti i dati" dell'app elimina la copia su iCloud insieme ai dati locali.</p>
+
+    <h2 id="net-it">4. Accesso alla rete</h2>
+    <p>L'elenco che segue è esaustivo — questi sono gli unici casi in cui l'app contatta un servizio esterno. Ogni richiesta utilizza HTTPS e non contiene account, token di accesso né identificatori pubblicitari. Per la natura stessa di una richiesta internet, tuttavia, il server ricevente vede il tuo indirizzo IP e lo User-Agent.</p>
+    <div class="table-wrap">
+    <table>
+        <thead>
+            <tr><th>Endpoint</th><th>Scopo</th><th>Quando avviene</th><th>Cosa vede il destinatario</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>raw.githubusercontent.com</code></td>
+                <td>Recupera l'elenco delle stazioni radio, la lista di notizie curata e la configurazione dell'app, così che possano cambiare senza un aggiornamento dell'app</td>
+                <td><strong>All'avvio dell'app</strong> e quando viene usata la funzione corrispondente</td>
+                <td>Indirizzo IP, User-Agent</td>
+            </tr>
+            <tr>
+                <td>VOA 中文 · Wikinews · Wikipedia</td>
+                <td>Testo integrale degli articoli di notizie</td>
+                <td>Quando apri un articolo il cui testo non è già memorizzato sul tuo dispositivo</td>
+                <td>Indirizzo IP, l'identificatore dell'articolo richiesto</td>
+            </tr>
+            <tr>
+                <td><code>translate.googleapis.com</code> · <code>translate.google.com</code> (Google Traduttore)</td>
+                <td>Traduzione di una frase da te selezionata</td>
+                <td><strong>Solo quando tocchi il pulsante di traduzione</strong></td>
+                <td>Il testo della frase, la lingua di destinazione, l'indirizzo IP</td>
+            </tr>
+            <tr>
+                <td><code>sk.cri.cn</code> (CRI) · <code>ngcdn001.cnr.cn</code> (中国之声)</td>
+                <td>Streaming radio in diretta in lingua cinese</td>
+                <td>Solo mentre la radio è in riproduzione</td>
+                <td>Indirizzo IP, dati della sessione di ascolto</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <p><strong>Avviso su Google Traduttore:</strong> l'uso della funzione di traduzione delle frasi <strong>invia il testo di quella frase a Google</strong>. Google riceve il testo e il tuo indirizzo IP e li gestisce secondo le <a href="https://policies.google.com/privacy">Norme sulla privacy di Google</a>. Ciò avviene <strong>solo quando richiedi esplicitamente una traduzione</strong> — mai in modo automatico — e insieme al testo non viene inviato alcun dato dell'account né identificatore del dispositivo. Se non usi mai la funzione di traduzione, nessun dato viene inviato a Google.</p>
+    <p>Lo sviluppatore non raccoglie né può ispezionare il contenuto di nessuna delle comunicazioni sopra elencate e non gestisce alcun server. Gli articoli scaricati vengono memorizzati nella cache del tuo dispositivo per la rilettura e poi eliminati. Le definizioni delle parole e i dati del dizionario sono inclusi nell'app e vengono consultati sul dispositivo, quindi per essi non viene effettuata alcuna richiesta di rete. Gli articoli di UN News arrivano con il testo già incluso nella lista di notizie curata di cui sopra; l'app non contatta mai direttamente un server delle Nazioni Unite.</p>
+
+    <h2>5. Autorizzazioni</h2>
+    <p><strong>iOS:</strong> l'app non richiede autorizzazioni sensibili (fotocamera, microfono, posizione, contatti, foto) né l'autorizzazione al tracciamento (ATT). Utilizza la modalità audio in background affinché l'audio di apprendimento avviato dall'utente (MP3 delle frasi, riproduzione del capitolo intero, TTS degli articoli) possa continuare a schermo spento e mostrare i controlli di riproduzione nella schermata di blocco.</p>
+    <p><strong>Autorizzazione alle notifiche:</strong> il promemoria giornaliero "Frase del giorno" è attivo per impostazione predefinita e l'app richiede l'autorizzazione alle notifiche dopo che chiudi il popup della frase del giorno, oppure quando attivi il promemoria nelle Impostazioni. Si tratta di <strong>notifiche locali generate sul tuo dispositivo</strong> — nulla viene inviato a un server e nulla arriva tramite un servizio push. Puoi disattivarle in qualsiasi momento nelle impostazioni dell'app, e rifiutare l'autorizzazione non pregiudica nessun'altra funzione. Non viene mai inviata alcuna notifica di marketing.</p>
+    <p><strong>Android:</strong> <code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>VIBRATE</code> (normale), <code>FOREGROUND_SERVICE</code> + <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code> (tipo riproduzione multimediale), <code>RECEIVE_BOOT_COMPLETED</code> (per ripristinare il promemoria di studio programmato dopo un riavvio) e l'autorizzazione runtime di Android 13+ <code>POST_NOTIFICATIONS</code> (usata per mostrare il promemoria giornaliero "Frase del giorno" — la scheda di riproduzione mostrata durante l'audio è una notifica di media session che appare indipendentemente da questa autorizzazione). Non viene richiesta nessun'altra autorizzazione pericolosa e non viene inviata alcuna notifica di marketing.</p>
+
+    <h2>6. Sintesi vocale (TTS)</h2>
+    <p>La lettura degli articoli e l'audio delle frasi utilizzano il motore TTS sul dispositivo del sistema operativo (iOS AVSpeechSynthesizer / Android TTS) e file MP3 inclusi nell'app. <strong>Tutta la sintesi avviene sul dispositivo</strong>; nessun audio viene inviato a servizi TTS in cloud.</p>
+
+    <h2>7. Pubblicità, analisi, pagamenti</h2>
+    <p>Questa app <strong>non</strong> contiene alcun SDK pubblicitario né SDK di analisi/tracciamento (Firebase Analytics, Google Analytics, Crashlytics, AppsFlyer, Adjust, ecc.). L'upgrade Pro opzionale utilizza <strong>Apple App Store (iOS) o Google Play Billing (Android)</strong>; l'app non raccoglie né memorizza direttamente numeri di carte di pagamento o dati di conti di pagamento.</p>
+
+    <h2>8. Minori</h2>
+    <p>Poiché lo sviluppatore non raccoglie alcun dato personale, l'app è sicura per tutte le età. Il COPPA (USA) e le disposizioni del GDPR sui minori (UE) non trovano applicazione.</p>
+
+    <h2>9. Contenuti di terze parti e diritto d'autore</h2>
+    <p>La funzione "Notizie in tempo reale" mostra contenuti di terze parti alle seguenti condizioni:</p>
+    <ul>
+        <li><strong>VOA 中文</strong> — opera del governo degli Stati Uniti (pubblico dominio, 17 U.S.C. §105). Ogni schermata dell'articolo riporta l'attribuzione della fonte.</li>
+        <li><strong>Wikinews (cinese)</strong> — <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>. Ogni schermata dell'articolo riporta l'attribuzione della fonte e della licenza.</li>
+        <li><strong>UN News</strong> — vengono forniti l'attribuzione della fonte e un link alla pagina originale.</li>
+    </ul>
+    <p><strong>Radio cinese</strong> — l'app riproduce i flussi pubblici in diretta di CRI 环球资讯广播 e 中国之声 <strong>connettendosi direttamente all'indirizzo pubblicato da ciascuna emittente</strong>. Le trasmissioni non vengono mai registrate, memorizzate o ridistribuite, e il diritto d'autore resta di ciascuna emittente. Qualsiasi stazione verrà rimossa immediatamente dall'elenco su richiesta del titolare dei diritti.</p>
+    <p>Le frasi dei capitoli e l'audio nelle funzioni "Studio delle frasi / Ascolto integrale / Quiz" sono contenuti originali creati dall'editore dell'app.</p>
+
+    <h2>10. Sicurezza dei dati</h2>
+    <p>Non esiste alcuna superficie di violazione lato sviluppatore, poiché nessun dato viene trasmesso a un server dello sviluppatore. Tutte le chiamate di rete in uscita avvengono esclusivamente via HTTPS/TLS (iOS App Transport Security; Android <code>usesCleartextTraffic="false"</code>). I dati di sincronizzazione iOS seguono le politiche di sicurezza di Apple iCloud.</p>
+
+    <h2>11. Conservazione, cancellazione e i tuoi diritti</h2>
+    <p>Poiché non esiste alcun server gestito dallo sviluppatore, <strong>non esiste alcun periodo di conservazione lato server.</strong> Lo sviluppatore non detiene alcun dato degli utenti, quindi dal lato dello sviluppatore non c'è nulla a cui accedere, da correggere o da trasferire.</p>
+    <ul>
+        <li><strong>Dati sul dispositivo</strong> (segnalibri, parole apprese, progressi/badge dei quiz, preferenze) — conservati finché non li elimini o disinstalli l'app. "Impostazioni → Ripristina tutti i dati" li cancella immediatamente e <strong>elimina anche la copia su iCloud</strong>.</li>
+        <li><strong>Articoli di notizie nella cache</strong> — memorizzati temporaneamente per la rilettura ed eliminati automaticamente. Vengono cancellati anche da "Ripristina tutti i dati".</li>
+        <li><strong>Stato dell'acquisto Pro</strong> — viene memorizzato solo un contrassegno sì/no. Viene mantenuto anche dopo un ripristino dei dati per preservare un acquisto da te legittimamente effettuato, ed è ripristinabile dalla cronologia acquisti del tuo account Apple/Google. Non contiene alcuna informazione che ti identifichi personalmente.</li>
+        <li><strong>Disinstallazione</strong> — il sistema operativo rimuove tutti i dati locali.</li>
+    </ul>
+    <p>Per richieste di informazioni o di cancellazione ai sensi del GDPR dell'UE o di altre normative regionali, scrivi a <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a> e riceverai una risposta.</p>
+
+    <h2>12. Modifiche a questa informativa</h2>
+    <p>Gli aggiornamenti vengono pubblicati allo stesso URL. La data di "Ultimo aggiornamento" in alto riflette la revisione più recente. Le modifiche sostanziali vengono segnalate nelle note di rilascio dell'app.</p>
+
+    <h2>13. Contatto</h2>
+    <p>Domande su questa informativa o sulla gestione dei dati dell'app: <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
+
+    <h1 id="es">Política de Privacidad (Español)</h1>
+
+    <div class="meta">
+        <p><strong>App:</strong> News Chinese (新闻中文) — nombres localizados: 뉴스중국어학습 (KO) · ニュース中国語 (JA) · Chinesisch (DE) · Chinois actu (FR) · Cinese news (IT) · Chino actual (ES) · Tiếng Trung (VI)</p>
+        <p><strong>Plataformas:</strong> iOS (App Store) · Android (Google Play)</p>
+        <p><strong>ID de paquete / Bundle ID:</strong> com.chnews.one</p>
+        <p><strong>Desarrollador:</strong> Hansoo Lim — Chinese Learning Studio</p>
+        <p><strong>Contacto:</strong> <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
+        <p><strong>Última actualización:</strong> 2026-07-21</p>
+    </div>
+
+    <h2>1. Resumen</h2>
+    <p>El desarrollador <strong>no recopila, almacena ni transmite ningún dato personal.</strong> No hay servidor propio, ni SDK de publicidad, ni SDK de analítica o rastreo, ni cuentas ni inicio de sesión. En iOS, tus marcadores, palabras aprendidas y el progreso e insignias de los quizzes pueden sincronizarse a través de <strong>tu propio iCloud de Apple</strong> (bajo tu control; el desarrollador no puede acceder a él). La mejora opcional a Pro se procesa a través de Apple App Store (iOS) o Google Play Billing (Android).</p>
+    <p>Algunas funciones, eso sí, hacen que la app <strong>se comunique directamente con servicios de terceros</strong>: descargar el archivo de configuración de la app, obtener artículos de noticias, reproducir radio en streaming y traducir una frase cuando tocas el botón de traducir. Estas solicitudes no incluyen ninguna cuenta, identificador de dispositivo ni token, pero, por la propia naturaleza de una conexión a internet, el servicio receptor sí ve tu dirección IP. Consulta <a href="#net-es">4. Acceso a la red</a> para ver la lista completa.</p>
+
+    <h2>2. Datos personales que recopilamos</h2>
+    <p><strong>Ninguno.</strong> El desarrollador no recopila nombres, correos electrónicos, números de teléfono, ubicación, contactos, fotos/archivos multimedia, identificadores publicitarios (IDFA/AAID), identificadores de dispositivo ni telemetría de uso. No existe ningún servidor operado por el desarrollador. En iOS, la app no realiza ningún rastreo de App Tracking Transparency (ATT).</p>
+
+    <h2>3. Datos guardados en tu dispositivo y en tu propio iCloud</h2>
+    <p>Los siguientes elementos se guardan en tu dispositivo de forma predeterminada (iOS: UserDefaults / Keychain / SQLite incluido en la app; Android: SharedPreferences / SQLite):</p>
+    <ul>
+        <li>Marcadores (las frases/artículos que guardaste)</li>
+        <li>Palabras aprendidas (vocabulario) y progreso de los quizzes / insignias de logros</li>
+        <li>Preferencias de la app — modo oscuro, tamaño de letra, reproducción automática, mantener pantalla encendida, vibración háptica</li>
+    </ul>
+    <p><strong>Sincronización en iOS:</strong> si has iniciado sesión en iCloud e iCloud Drive está activado para esta app, tus marcadores, palabras aprendidas e insignias de los quizzes pueden sincronizarse con tus otros dispositivos Apple a través de <strong>tu propio contenedor privado de iCloud</strong>. Apple lo almacena bajo tu cuenta; <strong>el desarrollador no puede acceder a él.</strong> Para desactivar la sincronización, apaga iCloud para esta app en los Ajustes de iOS. La opción "Ajustes → Restablecer todos los datos" de la app elimina la copia de iCloud junto con los datos locales.</p>
+
+    <h2 id="net-es">4. Acceso a la red</h2>
+    <p>La lista siguiente es exhaustiva: estos son los únicos casos en los que la app se conecta a un servicio externo. Todas las solicitudes usan HTTPS y no incluyen ninguna cuenta, token de inicio de sesión ni identificador publicitario. Sin embargo, por la propia naturaleza de una conexión a internet, el servidor receptor sí ve tu dirección IP y tu User-Agent.</p>
+    <div class="table-wrap">
+    <table>
+        <thead>
+            <tr><th>Destino</th><th>Propósito</th><th>Cuándo ocurre</th><th>Qué ve el receptor</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>raw.githubusercontent.com</code></td>
+                <td>Descarga la lista de emisoras de radio, la lista curada de noticias y la configuración de la app, para que puedan cambiar sin necesidad de actualizar la app</td>
+                <td><strong>Al abrir la app</strong> y cuando se usa la función correspondiente</td>
+                <td>Dirección IP, User-Agent</td>
+            </tr>
+            <tr>
+                <td>VOA 中文 · Wikinews · Wikipedia</td>
+                <td>Cuerpo de los artículos de noticias</td>
+                <td>Cuando abres un artículo cuyo texto aún no está guardado en tu dispositivo</td>
+                <td>Dirección IP, el identificador del artículo solicitado</td>
+            </tr>
+            <tr>
+                <td><code>translate.googleapis.com</code> · <code>translate.google.com</code> (Google Translate)</td>
+                <td>Traducir una frase que seleccionaste</td>
+                <td><strong>Solo cuando tocas el botón de traducir</strong></td>
+                <td>El texto de la frase, el idioma de destino, la dirección IP</td>
+            </tr>
+            <tr>
+                <td><code>sk.cri.cn</code> (CRI) · <code>ngcdn001.cnr.cn</code> (中国之声)</td>
+                <td>Radio en directo en chino (streaming)</td>
+                <td>Solo mientras la radio está sonando</td>
+                <td>Dirección IP, datos de la sesión de escucha</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <p><strong>Aviso sobre Google Translate:</strong> al usar la función de traducción de frases, <strong>el texto de esa frase se envía a Google</strong>. Google recibe el texto y tu dirección IP y los trata conforme a la <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a>. Esto ocurre <strong>solo cuando solicitas explícitamente una traducción</strong> — nunca de forma automática — y no se envía junto a ella ningún dato de cuenta ni identificador de dispositivo. Si nunca usas la función de traducción, no se envía ningún dato a Google.</p>
+    <p>El desarrollador ni recopila ni puede inspeccionar el contenido de nada de lo anterior, y no opera ningún servidor. Los artículos descargados se guardan en caché en tu dispositivo para poder releerlos y después se descartan. Las definiciones de palabras y los datos del diccionario vienen incluidos dentro de la app y se consultan en el dispositivo, así que no se realiza ninguna solicitud de red para ellos. Los artículos de UN News llegan con su texto ya incluido en la lista curada de noticias mencionada arriba; la app nunca se conecta directamente a un servidor de la ONU.</p>
+
+    <h2>5. Permisos</h2>
+    <p><strong>iOS:</strong> la app no solicita ningún permiso sensible (cámara, micrófono, ubicación, contactos, fotos) ni el permiso de rastreo (ATT). Usa el modo de audio en segundo plano para que el audio de aprendizaje iniciado por ti (MP3 de frases, reproducción de capítulos completos, TTS de artículos) pueda seguir sonando con la pantalla apagada y mostrar los controles de reproducción en la pantalla de bloqueo.</p>
+    <p><strong>Permiso de notificaciones:</strong> el recordatorio diario de la "Frase del día" está activado de forma predeterminada, y la app pide el permiso de notificaciones después de que cierres la ventana de la frase diaria, o cuando activas el recordatorio en Ajustes. Son <strong>notificaciones locales generadas en tu dispositivo</strong>: no se envía nada a ningún servidor y nada llega a través de un servicio push. Puedes desactivarlas en cualquier momento en los ajustes de la app, y rechazar el permiso no afecta a ninguna otra función. Nunca se envían notificaciones de marketing.</p>
+    <p><strong>Android:</strong> <code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>VIBRATE</code> (normal), <code>FOREGROUND_SERVICE</code> + <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code> (tipo reproducción multimedia), <code>RECEIVE_BOOT_COMPLETED</code> (para restaurar el recordatorio de estudio programado tras un reinicio) y el permiso en tiempo de ejecución de Android 13+ <code>POST_NOTIFICATIONS</code> (usado para mostrar el recordatorio diario de la "Frase del día" — la tarjeta de reproducción que aparece durante el audio es una notificación de sesión multimedia que se muestra independientemente de este permiso). No se solicita ningún otro permiso peligroso y no se envían notificaciones de marketing.</p>
+
+    <h2>6. Texto a voz</h2>
+    <p>La lectura de artículos y el audio de las frases usan el motor TTS del sistema operativo, que funciona en el dispositivo (iOS AVSpeechSynthesizer / Android TTS), y archivos MP3 incluidos en la app. <strong>Toda la síntesis ocurre en el dispositivo</strong>; no se envía ningún audio a servicios de TTS en la nube.</p>
+
+    <h2>7. Publicidad, analítica y pagos</h2>
+    <p>Esta app <strong>no</strong> contiene ningún SDK de publicidad ni ningún SDK de analítica o rastreo (Firebase Analytics, Google Analytics, Crashlytics, AppsFlyer, Adjust, etc.). La mejora opcional a Pro usa <strong>Apple App Store (iOS) o Google Play Billing (Android)</strong>; la app no recopila ni almacena directamente números de tarjeta ni datos de cuentas de pago.</p>
+
+    <h2>8. Menores</h2>
+    <p>Como el desarrollador no recopila ningún dato personal, la app es segura para todas las edades. No son aplicables la COPPA (EE. UU.) ni las disposiciones sobre menores del RGPD (UE).</p>
+
+    <h2>9. Contenido de terceros y derechos de autor</h2>
+    <p>La función "Noticias en tiempo real" muestra contenido de terceros bajo las siguientes condiciones:</p>
+    <ul>
+        <li><strong>VOA 中文</strong> — obra del Gobierno de EE. UU. (dominio público, 17 U.S.C. §105). Cada pantalla de artículo incluye la atribución de la fuente.</li>
+        <li><strong>Wikinews (chino)</strong> — <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>. Cada pantalla de artículo incluye la atribución de la fuente y de la licencia.</li>
+        <li><strong>UN News</strong> — se incluye la atribución de la fuente y un enlace a la página original.</li>
+    </ul>
+    <p><strong>Radio china</strong> — la app reproduce las emisiones públicas en directo de CRI 环球资讯广播 y 中国之声 <strong>conectándose directamente a la dirección que cada emisora publica</strong>. Las emisiones nunca se graban, almacenan ni redistribuyen, y los derechos de autor pertenecen a cada emisora. Cualquier emisora será retirada de la lista de inmediato a petición del titular de los derechos.</p>
+    <p>Las frases y el audio de los capítulos en las funciones "Estudio de frases / Escucha completa / Quiz" son contenido propio creado por el editor de la app.</p>
+
+    <h2>10. Seguridad de los datos</h2>
+    <p>No existe ninguna vía de fuga de datos del lado del desarrollador, ya que ningún dato se transmite a un servidor del desarrollador. Todas las conexiones de red salientes son exclusivamente HTTPS/TLS (iOS App Transport Security; Android <code>usesCleartextTraffic="false"</code>). Los datos de sincronización de iOS siguen las políticas de seguridad de iCloud de Apple.</p>
+
+    <h2>11. Conservación, eliminación y tus derechos</h2>
+    <p>Como no existe ningún servidor operado por el desarrollador, <strong>no existe ningún período de conservación del lado del servidor.</strong> El desarrollador no posee ningún dato de usuario, así que no hay nada que consultar, corregir ni portar por su parte.</p>
+    <ul>
+        <li><strong>Datos en el dispositivo</strong> (marcadores, palabras aprendidas, progreso/insignias de los quizzes, preferencias) — se conservan hasta que los borres o desinstales la app. "Ajustes → Restablecer todos los datos" los borra de inmediato y <strong>elimina también la copia de iCloud</strong>.</li>
+        <li><strong>Artículos de noticias en caché</strong> — se guardan temporalmente para relecturas y se descartan automáticamente. También se borran con "Restablecer todos los datos".</li>
+        <li><strong>Estado de la compra Pro</strong> — solo se guarda un indicador de sí/no. Se conserva incluso tras un restablecimiento de datos, con el fin de preservar una compra que hiciste legítimamente, y puede restaurarse desde el historial de compras de tu cuenta de Apple/Google. No contiene ninguna información que te identifique personalmente.</li>
+        <li><strong>Desinstalación</strong> — el sistema operativo elimina todos los datos locales.</li>
+    </ul>
+    <p>Para consultas o solicitudes de eliminación conforme al RGPD de la UE u otras leyes regionales, escribe a <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a> y recibirás una respuesta.</p>
+
+    <h2>12. Cambios en esta política</h2>
+    <p>Las actualizaciones se publican en la misma URL. La fecha de "Última actualización" en la parte superior refleja la revisión más reciente. Los cambios relevantes se indican en las notas de versión de la app.</p>
+
+    <h2>13. Contacto</h2>
+    <p>Preguntas sobre esta política o sobre el tratamiento de datos de la app: <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
+
+    <h1 id="vi">Chính sách quyền riêng tư (Tiếng Việt)</h1>
+
+    <div class="meta">
+        <p><strong>Ứng dụng:</strong> News Chinese (新闻中文) — tên theo từng ngôn ngữ: 뉴스중국어학습 (KO) · ニュース中国語 (JA) · Chinesisch (DE) · Chinois actu (FR) · Cinese news (IT) · Chino actual (ES) · Tiếng Trung (VI)</p>
+        <p><strong>Nền tảng:</strong> iOS (App Store) · Android (Google Play)</p>
+        <p><strong>Package / Bundle ID:</strong> com.chnews.one</p>
+        <p><strong>Nhà phát triển:</strong> Hansoo Lim — Chinese Learning Studio</p>
+        <p><strong>Liên hệ:</strong> <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
+        <p><strong>Cập nhật lần cuối:</strong> 2026-07-21</p>
+    </div>
+
+    <h2>1. Tóm tắt nhanh</h2>
+    <p>Nhà phát triển <strong>không thu thập, không lưu trữ và không truyền đi bất kỳ dữ liệu cá nhân nào.</strong> Không có máy chủ backend, không có SDK quảng cáo, không có SDK phân tích/theo dõi, và không có tài khoản/đăng nhập. Trên iOS, các dấu trang, từ đã học và tiến độ/huy hiệu bài tập của bạn có thể được đồng bộ qua <strong>iCloud của chính tài khoản Apple của bạn</strong> (do bạn kiểm soát; nhà phát triển không thể truy cập). Gói nâng cấp Pro tùy chọn được xử lý bởi Apple App Store (iOS) hoặc Google Play Billing (Android).</p>
+    <p>Tuy vậy, một số tính năng khiến ứng dụng <strong>kết nối trực tiếp với dịch vụ bên thứ ba</strong> — tải tệp cấu hình của ứng dụng, lấy bài báo, phát radio trực tiếp, và dịch một câu khi bạn nhấn nút dịch. Các yêu cầu này không kèm theo tài khoản, mã định danh thiết bị hay token nào, nhưng do bản chất của một yêu cầu internet, dịch vụ nhận yêu cầu vẫn thấy được địa chỉ IP của bạn. Xem <a href="#net-vi">4. Truy cập mạng</a> để biết danh sách đầy đủ.</p>
+
+    <h2>2. Dữ liệu cá nhân chúng tôi thu thập</h2>
+    <p><strong>Không có gì cả.</strong> Nhà phát triển không thu thập họ tên, email, số điện thoại, vị trí, danh bạ, ảnh/phương tiện, mã định danh quảng cáo (IDFA/AAID), mã định danh thiết bị hay dữ liệu đo lường mức sử dụng. Không tồn tại máy chủ nào do nhà phát triển vận hành. Trên iOS, ứng dụng không thực hiện bất kỳ hoạt động theo dõi App Tracking Transparency (ATT) nào.</p>
+
+    <h2>3. Dữ liệu lưu trên thiết bị của bạn và trên iCloud của chính bạn</h2>
+    <p>Các mục sau được lưu mặc định trên thiết bị của bạn (iOS: UserDefaults / Keychain / SQLite đóng gói sẵn; Android: SharedPreferences / SQLite):</p>
+    <ul>
+        <li>Dấu trang (những câu/bài báo bạn đã lưu)</li>
+        <li>Từ đã học (từ vựng) và tiến độ bài tập / huy hiệu thành tích</li>
+        <li>Tùy chọn ứng dụng — chế độ tối, cỡ chữ, tự động phát, giữ màn hình sáng, rung phản hồi</li>
+    </ul>
+    <p><strong>Đồng bộ trên iOS:</strong> nếu bạn đã đăng nhập iCloud và bật iCloud Drive cho ứng dụng này, các dấu trang, từ đã học và huy hiệu bài tập của bạn có thể được đồng bộ sang các thiết bị Apple khác của bạn thông qua <strong>vùng chứa iCloud riêng tư của chính bạn</strong>. Apple lưu trữ dữ liệu này dưới tài khoản của bạn; <strong>nhà phát triển không thể truy cập.</strong> Để tắt đồng bộ, hãy tắt iCloud cho ứng dụng này trong Cài đặt iOS. Chức năng "Cài đặt → Đặt lại toàn bộ dữ liệu" trong ứng dụng sẽ xóa cả bản sao trên iCloud cùng với dữ liệu cục bộ.</p>
+
+    <h2 id="net-vi">4. Truy cập mạng</h2>
+    <p>Danh sách dưới đây là toàn bộ — đây là những trường hợp duy nhất ứng dụng kết nối với dịch vụ bên ngoài. Mọi yêu cầu đều dùng HTTPS và không kèm theo tài khoản, token đăng nhập hay mã định danh quảng cáo nào. Tuy nhiên, do bản chất của một yêu cầu internet, máy chủ nhận yêu cầu vẫn thấy được địa chỉ IP và User-Agent của bạn.</p>
+    <div class="table-wrap">
+    <table>
+        <thead>
+            <tr><th>Điểm kết nối</th><th>Mục đích</th><th>Khi nào diễn ra</th><th>Bên nhận thấy được gì</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>raw.githubusercontent.com</code></td>
+                <td>Tải danh sách đài radio, danh sách tin tức tuyển chọn và cấu hình ứng dụng, để những nội dung này có thể thay đổi mà không cần cập nhật ứng dụng</td>
+                <td><strong>Khi mở ứng dụng</strong> và khi tính năng liên quan được sử dụng</td>
+                <td>Địa chỉ IP, User-Agent</td>
+            </tr>
+            <tr>
+                <td>VOA 中文 · Wikinews · Wikipedia</td>
+                <td>Nội dung bài báo tin tức</td>
+                <td>Khi bạn mở một bài báo mà nội dung chưa được lưu sẵn trên thiết bị</td>
+                <td>Địa chỉ IP, mã định danh của bài báo được yêu cầu</td>
+            </tr>
+            <tr>
+                <td><code>translate.googleapis.com</code> · <code>translate.google.com</code> (Google Dịch)</td>
+                <td>Dịch câu bạn đã chọn</td>
+                <td><strong>Chỉ khi bạn nhấn nút dịch</strong></td>
+                <td>Nội dung câu văn, ngôn ngữ đích, địa chỉ IP</td>
+            </tr>
+            <tr>
+                <td><code>sk.cri.cn</code> (CRI) · <code>ngcdn001.cnr.cn</code> (中国之声)</td>
+                <td>Phát trực tiếp radio tiếng Trung</td>
+                <td>Chỉ trong lúc radio đang phát</td>
+                <td>Địa chỉ IP, dữ liệu phiên nghe</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <p><strong>Lưu ý về Google Dịch:</strong> khi sử dụng tính năng dịch câu, <strong>nội dung câu đó sẽ được gửi tới Google</strong>. Google nhận được văn bản và địa chỉ IP của bạn, và xử lý chúng theo <a href="https://policies.google.com/privacy">Chính sách quyền riêng tư của Google</a>. Việc này <strong>chỉ xảy ra khi bạn chủ động yêu cầu dịch</strong> — không bao giờ diễn ra tự động — và không có thông tin tài khoản hay mã định danh thiết bị nào được gửi kèm. Nếu bạn không bao giờ dùng tính năng dịch, sẽ không có dữ liệu nào được gửi tới Google.</p>
+    <p>Nhà phát triển không thu thập và cũng không thể xem nội dung của bất kỳ mục nào ở trên, và không vận hành máy chủ nào. Bài báo đã tải về được lưu tạm trên thiết bị của bạn để đọc lại rồi bị loại bỏ. Nghĩa của từ và dữ liệu từ điển được đóng gói sẵn trong ứng dụng và tra cứu ngay trên thiết bị, nên không có yêu cầu mạng nào phát sinh cho chúng. Các tin của UN News đã kèm sẵn nội dung trong danh sách tin tức tuyển chọn nói trên; ứng dụng không bao giờ kết nối trực tiếp với máy chủ của UN.</p>
+
+    <h2>5. Quyền truy cập</h2>
+    <p><strong>iOS:</strong> ứng dụng không yêu cầu quyền nhạy cảm nào (máy ảnh, micrô, vị trí, danh bạ, ảnh) và không yêu cầu quyền theo dõi (ATT). Ứng dụng dùng chế độ phát âm thanh nền để âm thanh học tập do bạn khởi phát (MP3 câu, phát cả chương, TTS bài báo) có thể tiếp tục phát khi tắt màn hình và hiển thị nút điều khiển trên màn hình khóa.</p>
+    <p><strong>Quyền thông báo:</strong> lời nhắc "Câu của hôm nay" hằng ngày được bật mặc định, và ứng dụng sẽ hỏi quyền thông báo sau khi bạn đóng cửa sổ "Câu của hôm nay", hoặc khi bạn bật lời nhắc trong Cài đặt. Đây là <strong>thông báo cục bộ được tạo ngay trên thiết bị của bạn</strong> — không có gì được gửi tới máy chủ và không có gì đến qua dịch vụ đẩy thông báo. Bạn có thể tắt bất cứ lúc nào trong cài đặt của ứng dụng, và việc từ chối quyền này không ảnh hưởng đến mọi tính năng khác. Không bao giờ có thông báo quảng cáo nào được gửi.</p>
+    <p><strong>Android:</strong> <code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>VIBRATE</code> (loại thông thường), <code>FOREGROUND_SERVICE</code> + <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code> (loại phát phương tiện), <code>RECEIVE_BOOT_COMPLETED</code> (để khôi phục lời nhắc học đã hẹn giờ sau khi khởi động lại máy), và quyền lúc chạy trên Android 13+ <code>POST_NOTIFICATIONS</code> (dùng để hiển thị lời nhắc "Câu của hôm nay" hằng ngày — thẻ đang phát hiển thị khi phát âm thanh là thông báo phiên phương tiện, xuất hiện bất kể quyền này). Không có quyền nguy hiểm nào khác được yêu cầu, và không có thông báo quảng cáo nào được gửi.</p>
+
+    <h2>6. Chuyển văn bản thành giọng nói</h2>
+    <p>Tính năng đọc bài báo và âm thanh câu sử dụng công cụ TTS chạy trên thiết bị của hệ điều hành (iOS AVSpeechSynthesizer / Android TTS) cùng các tệp MP3 đóng gói sẵn. <strong>Toàn bộ quá trình tổng hợp giọng nói diễn ra trên thiết bị</strong>; không có âm thanh nào được gửi tới dịch vụ TTS đám mây.</p>
+
+    <h2>7. Quảng cáo, phân tích, thanh toán</h2>
+    <p>Ứng dụng này <strong>không</strong> chứa SDK quảng cáo và không chứa SDK phân tích/theo dõi nào (Firebase Analytics, Google Analytics, Crashlytics, AppsFlyer, Adjust, v.v.). Gói nâng cấp Pro tùy chọn sử dụng <strong>Apple App Store (iOS) hoặc Google Play Billing (Android)</strong>; ứng dụng không trực tiếp thu thập hay lưu trữ số thẻ thanh toán hoặc thông tin tài khoản thanh toán.</p>
+
+    <h2>8. Trẻ em</h2>
+    <p>Vì nhà phát triển không thu thập bất kỳ dữ liệu cá nhân nào, ứng dụng an toàn cho mọi lứa tuổi. COPPA (Hoa Kỳ) và các điều khoản về trẻ vị thành niên của GDPR (EU) không áp dụng.</p>
+
+    <h2>9. Nội dung bên thứ ba &amp; bản quyền</h2>
+    <p>Tính năng "Tin tức mới nhất" hiển thị nội dung của bên thứ ba theo các điều khoản sau:</p>
+    <ul>
+        <li><strong>VOA 中文</strong> — tác phẩm của Chính phủ Hoa Kỳ (thuộc phạm vi công cộng, 17 U.S.C. §105). Mỗi màn hình bài báo đều ghi rõ nguồn.</li>
+        <li><strong>Wikinews (tiếng Trung)</strong> — <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>. Mỗi màn hình bài báo đều ghi rõ nguồn + giấy phép.</li>
+        <li><strong>UN News</strong> — có ghi nguồn và liên kết tới trang gốc.</li>
+    </ul>
+    <p><strong>Radio tiếng Trung</strong> — ứng dụng phát luồng trực tiếp công khai của CRI 环球资讯广播 và 中国之声 bằng cách <strong>kết nối thẳng tới địa chỉ mà mỗi đài công bố</strong>. Các chương trình phát sóng không bao giờ bị ghi lại, lưu trữ hay phân phối lại, và bản quyền thuộc về từng đài. Bất kỳ đài nào cũng sẽ được gỡ khỏi danh sách ngay lập tức khi chủ sở hữu quyền yêu cầu.</p>
+    <p>Các câu và âm thanh theo chương trong tính năng "Học câu / Nghe cả bài / Bài tập" là nội dung do chính nhà phát hành ứng dụng biên soạn.</p>
+
+    <h2>10. Bảo mật dữ liệu</h2>
+    <p>Không tồn tại bề mặt rò rỉ nào phía nhà phát triển vì không có dữ liệu nào được truyền tới máy chủ của nhà phát triển. Mọi kết nối mạng ra ngoài đều chỉ dùng HTTPS/TLS (iOS App Transport Security; Android <code>usesCleartextTraffic="false"</code>). Dữ liệu đồng bộ trên iOS tuân theo chính sách bảo mật của Apple iCloud.</p>
+
+    <h2>11. Lưu giữ, xóa &amp; quyền của bạn</h2>
+    <p>Vì không có máy chủ nào do nhà phát triển vận hành, <strong>không tồn tại thời hạn lưu giữ phía máy chủ.</strong> Nhà phát triển không nắm giữ dữ liệu người dùng nào, nên phía nhà phát triển không có gì để truy cập, chỉnh sửa hay chuyển giao.</p>
+    <ul>
+        <li><strong>Dữ liệu trên thiết bị</strong> (dấu trang, từ đã học, tiến độ/huy hiệu bài tập, tùy chọn) — được giữ cho đến khi bạn xóa hoặc gỡ cài đặt ứng dụng. "Cài đặt → Đặt lại toàn bộ dữ liệu" xóa ngay lập tức, và <strong>xóa cả bản sao trên iCloud cùng lúc</strong>.</li>
+        <li><strong>Bài báo lưu tạm</strong> — được lưu tạm thời để đọc lại và tự động bị loại bỏ. Cũng được xóa bằng "Đặt lại toàn bộ dữ liệu".</li>
+        <li><strong>Trạng thái mua Pro</strong> — chỉ lưu một cờ có/không. Cờ này được giữ lại ngay cả sau khi đặt lại dữ liệu để bảo toàn giao dịch mua hợp lệ của bạn, và có thể khôi phục từ lịch sử mua hàng của tài khoản Apple/Google của bạn. Nó không chứa thông tin nhận dạng cá nhân nào.</li>
+        <li><strong>Gỡ cài đặt</strong> — hệ điều hành sẽ xóa toàn bộ dữ liệu cục bộ.</li>
+    </ul>
+    <p>Với các câu hỏi hoặc yêu cầu xóa dữ liệu theo GDPR của EU hoặc luật pháp khu vực khác, hãy gửi thư tới <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a> và bạn sẽ nhận được phản hồi.</p>
+
+    <h2>12. Thay đổi chính sách này</h2>
+    <p>Các bản cập nhật được đăng tại cùng một URL. Ngày "Cập nhật lần cuối" ở đầu trang phản ánh lần sửa đổi gần nhất. Những thay đổi quan trọng sẽ được ghi chú trong ghi chú phát hành của ứng dụng.</p>
+
+    <h2>13. Liên hệ</h2>
+    <p>Mọi câu hỏi về chính sách này hoặc cách ứng dụng xử lý dữ liệu: <a href="mailto:ddontti_studio@outlook.kr">ddontti_studio@outlook.kr</a></p>
 </article>
 </body>
 </html>
