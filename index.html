@@ -54,6 +54,10 @@
   </nav>
 
   <div class="links">
+    <a class="card" href="https://newschineseapp.com/" id="cardSite">
+      <strong id="t-site-t">Official website →</strong>
+      <span id="t-site-d">App overview, features, screenshots and App Store download</span>
+    </a>
     <a class="card" href="support.html" id="cardSupport">
       <strong id="t-sup-t">Support &amp; FAQ →</strong>
       <span id="t-sup-d">Contact, FAQ, subscription &amp; refund help</span>
@@ -79,34 +83,42 @@
 (function () {
   var STR = {
     ko: { sub:"실제 뉴스로 배우는 중국어",
+          siteT:"공식 웹사이트 →", siteD:"앱 소개, 주요 기능, 스크린샷, App Store 다운로드",
           supT:"고객지원 · FAQ →", supD:"문의처, 자주 묻는 질문, 구독·환불 안내",
           prvT:"개인정보처리방침 →", prvD:"수집하지 않는 정보, 네트워크 통신 내역, 보존·삭제",
           mApp:"앱:", mBundle:"번들 ID:", mPlatform:"플랫폼:", mDev:"개발자:", mContact:"문의:" },
     en: { sub:"Learn Mandarin through real news.",
+          siteT:"Official website →", siteD:"App overview, features, screenshots and App Store download",
           supT:"Support & FAQ →", supD:"Contact, FAQ, subscription & refund help",
           prvT:"Privacy Policy →", prvD:"What we don't collect, network access, retention & deletion",
           mApp:"App:", mBundle:"Bundle ID:", mPlatform:"Platforms:", mDev:"Developer:", mContact:"Contact:" },
     ja: { sub:"本物のニュースで学ぶ中国語。",
+          siteT:"公式サイト →", siteD:"アプリ紹介、主な機能、スクリーンショット、App Store からのダウンロード",
           supT:"サポート・FAQ →", supD:"お問い合わせ、よくある質問、サブスクリプション・返金のご案内",
           prvT:"プライバシーポリシー →", prvD:"収集しない情報、ネットワーク通信、保存と削除",
           mApp:"アプリ:", mBundle:"バンドルID:", mPlatform:"プラットフォーム:", mDev:"開発者:", mContact:"お問い合わせ:" },
     de: { sub:"Chinesisch lernen mit echten Nachrichten.",
+          siteT:"Offizielle Website →", siteD:"App-Vorstellung, Funktionen, Screenshots und Download im App Store",
           supT:"Support & FAQ →", supD:"Kontakt, häufige Fragen, Hilfe zu Abo & Erstattung",
           prvT:"Datenschutzerklärung →", prvD:"Was wir nicht erheben, Netzwerkzugriffe, Speicherung & Löschung",
           mApp:"App:", mBundle:"Bundle-ID:", mPlatform:"Plattformen:", mDev:"Entwickler:", mContact:"Kontakt:" },
     fr: { sub:"Apprendre le chinois avec de vraies actualités.",
+          siteT:"Site officiel →", siteD:"Présentation, fonctionnalités, captures d’écran et téléchargement sur l’App Store",
           supT:"Assistance & FAQ →", supD:"Contact, questions fréquentes, aide abonnement & remboursement",
           prvT:"Politique de confidentialité →", prvD:"Ce que nous ne collectons pas, accès réseau, conservation & suppression",
           mApp:"App :", mBundle:"Bundle ID :", mPlatform:"Plateformes :", mDev:"Développeur :", mContact:"Contact :" },
     it: { sub:"Impara il cinese con notizie vere.",
+          siteT:"Sito ufficiale →", siteD:"Presentazione, funzioni, screenshot e download dall’App Store",
           supT:"Supporto e FAQ →", supD:"Contatti, domande frequenti, aiuto su abbonamento e rimborsi",
           prvT:"Informativa sulla privacy →", prvD:"Cosa non raccogliamo, accessi di rete, conservazione ed eliminazione",
           mApp:"App:", mBundle:"Bundle ID:", mPlatform:"Piattaforme:", mDev:"Sviluppatore:", mContact:"Contatti:" },
     es: { sub:"Aprende chino con noticias reales.",
+          siteT:"Sitio web oficial →", siteD:"Presentación, funciones, capturas y descarga en la App Store",
           supT:"Soporte y preguntas frecuentes →", supD:"Contacto, preguntas frecuentes, ayuda con suscripción y reembolsos",
           prvT:"Política de privacidad →", prvD:"Qué no recopilamos, accesos de red, conservación y eliminación",
           mApp:"App:", mBundle:"Bundle ID:", mPlatform:"Plataformas:", mDev:"Desarrollador:", mContact:"Contacto:" },
     vi: { sub:"Học tiếng Trung qua tin tức thực tế.",
+          siteT:"Trang web chính thức →", siteD:"Giới thiệu ứng dụng, tính năng, ảnh chụp màn hình và tải từ App Store",
           supT:"Hỗ trợ & Câu hỏi thường gặp →", supD:"Liên hệ, câu hỏi thường gặp, hướng dẫn đăng ký & hoàn tiền",
           prvT:"Chính sách quyền riêng tư →", prvD:"Dữ liệu không thu thập, truy cập mạng, lưu trữ & xóa",
           mApp:"Ứng dụng:", mBundle:"Bundle ID:", mPlatform:"Nền tảng:", mDev:"Nhà phát triển:", mContact:"Liên hệ:" }
@@ -114,16 +126,21 @@
   // The privacy page carries per-language sections; deep-link straight to the
   // matching one so the reader never lands on a language they can't read.
   var PRIVACY_ANCHOR = { ko:"#ko", en:"#en", ja:"#ja", de:"#de", fr:"#fr", it:"#it", es:"#es", vi:"#vi" };
+  // The website has a page per language; the static href above stays on the Korean root for crawlers.
+  var SITE_PATH = { ko:"/", en:"/en/", ja:"/ja/", de:"/de/", fr:"/fr/", it:"/it/", es:"/es/", vi:"/vi/" };
 
   function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
 
   function apply(lang) {
     var s = STR[lang] || STR.en;
     set("t-sub", s.sub);
+    set("t-site-t", s.siteT); set("t-site-d", s.siteD);
     set("t-sup-t", s.supT); set("t-sup-d", s.supD);
     set("t-prv-t", s.prvT); set("t-prv-d", s.prvD);
     set("t-m-app", s.mApp); set("t-m-bundle", s.mBundle);
     set("t-m-platform", s.mPlatform); set("t-m-dev", s.mDev); set("t-m-contact", s.mContact);
+    var site = document.getElementById("cardSite");
+    if (site) site.setAttribute("href", "https://newschineseapp.com" + (SITE_PATH[lang] || "/"));
     var prv = document.getElementById("cardPrivacy");
     if (prv) prv.setAttribute("href", "privacy.html" + (PRIVACY_ANCHOR[lang] || ""));
     document.documentElement.lang = lang;
